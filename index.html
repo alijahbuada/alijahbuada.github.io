@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>goneadrift</title>
+<meta name="description" content="films, music, writing, and drawings by alijah jacob buada. san diego.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="goneadrift">
+<meta property="og:title" content="goneadrift · alijah jacob buada">
+<meta property="og:description" content="films, music, writing, and drawings by alijah jacob buada. san diego.">
+<meta property="og:url" content="https://alijahbuada.github.io/">
+<meta property="og:image" content="https://alijahbuada.github.io/images/og-headshot.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alijah Jacob Buada smiling in a black turtleneck, pine trees behind him">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="goneadrift · alijah jacob buada">
+<meta name="twitter:description" content="films, music, writing, and drawings by alijah jacob buada. san diego.">
+<meta name="twitter:image" content="https://alijahbuada.github.io/images/og-headshot.jpg">
+<meta name="theme-color" content="#191412">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%23191412%27/%3E%3Ctext x=%2732%27 y=%2746%27 font-size=%2740%27 text-anchor=%27middle%27 fill=%27%23f08a9c%27 font-family=%27serif%27%3E%E6%BC%82%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Nanum+Pen+Script&family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: a photocopied 2000s zine — cut-paper panels taped onto a warm dark desk, one riso-pink overprint accent, vertical JP spine down the side */
+:root{
+  --desk:#191412;      /* warm dark ground */
+  --paper:#241d19;     /* panel stock */
+  --paper-2:#2e2520;   /* raised scrap */
+  --ink:#ecdfc8;       /* cream text */
+  --ink-dim:#a8998a;   /* faded photocopy */
+  --riso:#f08a9c;      /* riso pink overprint */
+  --tape:#d9c8a2;      /* masking tape */
+  --sky:#8fb3bf;       /* faded film blue, used sparingly */
+  --line:#4a3d35;
+  --f-display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",Georgia,serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Helvetica Neue",Arial,sans-serif;
+  --f-dot:"DotGothic16","Courier New",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  background:var(--desk);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:16px;line-height:1.75;
+  padding-inline:16px;padding-block:28px 64px;
+  background-image:
+    radial-gradient(rgba(236,223,200,.035) 1px,transparent 1.2px);
+  background-size:5px 5px;
+}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px dashed var(--riso);outline-offset:3px}
+.wrap{max-width:1040px;margin-inline:auto;display:grid;gap:56px;position:relative}
+
+/* spine */
+.spine{position:fixed;right:max(10px,calc((100vw - 1140px)/2));top:50%;transform:translateY(-50%);
+  writing-mode:vertical-rl;font-family:var(--f-display);font-weight:800;font-size:15px;letter-spacing:.5em;color:var(--ink-dim);opacity:.55;pointer-events:none}
+@media (max-width:1180px){.spine{display:none}}
+
+/* labels */
+.dot{font-family:var(--f-dot);font-size:13px;letter-spacing:.08em;color:var(--ink-dim);text-transform:lowercase}
+.stamp{display:inline-block;font-family:var(--f-dot);font-size:12px;letter-spacing:.1em;color:var(--riso);
+  border:1.5px solid var(--riso);padding:1px 8px;border-radius:3px;transform:rotate(-2deg)}
+
+/* masthead */
+.mast{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;border-bottom:1px dashed var(--line);padding-bottom:22px}
+.mast h1{margin:0;font-family:var(--f-display);font-weight:800;font-size:clamp(52px,11vw,124px);line-height:.88;letter-spacing:-.02em}
+.mast h1 .drift{color:var(--riso);mix-blend-mode:screen;display:inline-block;transform:translate(.04em,.03em) rotate(-1.5deg)}
+.mast .kana{font-family:var(--f-display);font-size:clamp(18px,3vw,26px);color:var(--ink-dim);margin-top:10px;letter-spacing:.3em}
+.mast .issue{text-align:right;display:grid;gap:4px;justify-items:end}
+.mast .issue b{font-family:var(--f-display);font-size:42px;line-height:1;font-weight:700}
+@media (max-width:560px){.mast{grid-template-columns:1fr}.mast .issue{justify-items:start;text-align:left}}
+
+nav.index{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--f-dot);font-size:14px}
+nav.index a{text-decoration:none;color:var(--ink-dim)}
+nav.index a span{color:var(--riso)}
+nav.index a:hover{color:var(--ink)}
+
+/* intro */
+.hello{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:36px;align-items:start}
+.hello p.lede{font-family:var(--f-display);font-size:clamp(22px,3.2vw,30px);line-height:1.5;margin:0;text-wrap:balance}
+.hello p.lede em{font-style:normal;background:linear-gradient(transparent 62%,rgba(240,138,156,.35) 62%)}
+.now{background:var(--paper);padding:20px 22px;position:relative;transform:rotate(1deg);display:grid;gap:8px}
+.now ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:15px}
+.now li::before{content:"→ ";color:var(--riso);font-family:var(--f-dot)}
+@media (max-width:760px){.hello{grid-template-columns:1fr}}
+
+/* tape */
+.taped{position:relative}
+.taped::before{content:"";position:absolute;top:-11px;left:50%;width:84px;height:22px;transform:translateX(-50%) rotate(-3deg);
+  background:var(--tape);opacity:.55;box-shadow:0 1px 0 rgba(0,0,0,.2)}
+
+/* sections */
+section{display:grid;gap:22px}
+.sec-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.sec-head h2{margin:0;font-family:var(--f-display);font-weight:800;font-size:clamp(30px,5vw,46px);line-height:1}
+.sec-head .jp{font-family:var(--f-display);color:var(--riso);font-size:20px;letter-spacing:.2em}
+.sec-head .dot{margin-left:auto}
+
+/* films */
+.films{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.film{background:var(--paper);padding:14px 14px 18px;display:grid;gap:12px}
+.film:nth-child(2){transform:rotate(-.8deg)}
+.film:nth-child(1){transform:rotate(.6deg)}
+.frame{aspect-ratio:2.39/1;max-width:100%;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 30% 40%,rgba(240,138,156,.22),transparent 55%),
+    radial-gradient(circle at 75% 70%,rgba(143,179,191,.2),transparent 50%),
+    var(--paper-2);
+  display:grid;place-items:center}
+.frame::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.35) 1px,transparent 1.3px);background-size:4px 4px}
+.frame .ttl{position:relative;z-index:1;font-family:var(--f-display);font-weight:800;font-size:clamp(28px,4.4vw,44px);letter-spacing:.12em;color:var(--ink)}
+.frame .tc{position:absolute;left:10px;bottom:6px;z-index:1;font-family:var(--f-dot);font-size:12px;color:var(--tape)}
+.film h3{margin:0;font-family:var(--f-display);font-size:24px}
+.film p{margin:0;color:var(--ink-dim);font-size:15px}
+.film .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+@media (max-width:700px){.films{grid-template-columns:1fr}}
+
+/* sound */
+.sound{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:28px;align-items:start}
+.mine{background:var(--paper);padding:24px;display:grid;gap:14px;transform:rotate(-.6deg)}
+.mine .name{font-family:var(--f-display);font-weight:800;font-size:34px;line-height:1.1}
+.btn{display:inline-flex;align-items:center;gap:8px;justify-self:start;text-decoration:none;font-family:var(--f-dot);font-size:14px;
+  border:1.5px solid var(--ink);padding:6px 14px;border-radius:999px;transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--desk)}
+.tracks{margin:0;padding:0;list-style:none;border-top:1px dashed var(--line)}
+.tracks li{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.tracks .n{font-family:var(--f-dot);color:var(--riso);font-variant-numeric:tabular-nums}
+.tracks .t{font-weight:500}
+.tracks .a{color:var(--ink-dim);font-size:14px}
+.tracks .ph .t,.tracks .ph .a{color:var(--ink-dim);font-style:italic;opacity:.7}
+@media (max-width:760px){.sound{grid-template-columns:1fr}}
+
+/* shelf */
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.card{background:var(--paper);padding:16px 18px;display:grid;gap:6px;align-content:start}
+.card .kind{font-family:var(--f-dot);font-size:12px;color:var(--sky);letter-spacing:.1em}
+.card .what{font-family:var(--f-display);font-weight:700;font-size:21px;line-height:1.3}
+.card .by{color:var(--ink-dim);font-size:14px}
+.card.gold{outline:1.5px solid var(--riso);outline-offset:-6px}
+.lbx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+.four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.poster{aspect-ratio:2/3;max-width:100%;background:var(--paper-2);border:1px solid var(--line);padding:10px;display:flex;align-items:flex-end;
+  font-family:var(--f-display);font-weight:700;font-size:14px;line-height:1.25}
+.poster small{display:block;font-family:var(--f-dot);font-weight:400;color:var(--ink-dim);font-size:11px}
+.review{background:var(--paper);padding:20px 22px;display:grid;gap:10px;transform:rotate(.7deg)}
+.review blockquote{margin:0;font-family:var(--f-display);font-size:18px;line-height:1.7}
+.stats{display:flex;gap:26px;flex-wrap:wrap}
+.stats div{display:grid}
+.stats b{font-family:var(--f-display);font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+@media (max-width:760px){.lbx{grid-template-columns:1fr}}
+
+/* writing */
+.writing{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:start}
+.cover{aspect-ratio:2/3;max-width:260px;width:100%;background:
+   linear-gradient(160deg,rgba(240,138,156,.25),transparent 60%),var(--paper-2);
+   border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;justify-content:space-between;justify-self:center;transform:rotate(-2deg)}
+.cover .vt{writing-mode:vertical-rl;font-family:var(--f-display);font-weight:800;font-size:40px;letter-spacing:.15em;align-self:flex-end}
+.cover .au{font-family:var(--f-dot);font-size:12px;color:var(--ink-dim)}
+.excerpt{border-left:2px solid var(--riso);padding-left:20px;display:grid;gap:12px}
+.excerpt p{margin:0;max-width:60ch}
+.excerpt .soon{font-family:var(--f-display);font-size:20px;color:var(--ink-dim)}
+@media (max-width:700px){.writing{grid-template-columns:1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:36px}
+.about .bio p{margin:0 0 14px;max-width:62ch}
+.timeline{margin:0;padding:0;list-style:none;display:grid;gap:0}
+.timeline li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px dashed var(--line)}
+.timeline .when{font-family:var(--f-dot);font-size:13px;color:var(--riso);font-variant-numeric:tabular-nums}
+.timeline h4{margin:0;font-size:17px;font-weight:700}
+.timeline .org{color:var(--ink-dim);font-size:14px}
+.timeline p{margin:6px 0 0;font-size:15px;color:var(--ink-dim)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-family:var(--f-dot);font-size:12px;border:1px solid var(--line);padding:2px 10px;border-radius:2px;color:var(--ink-dim)}
+@media (max-width:800px){.about{grid-template-columns:1fr}}
+
+/* elsewhere */
+.elsewhere{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.link{background:var(--paper);padding:16px 18px;text-decoration:none;display:grid;gap:2px;transition:transform .2s,background .2s}
+.link:hover{transform:translateY(-3px) rotate(-.5deg);background:var(--paper-2)}
+.link b{font-family:var(--f-display);font-size:22px}
+.link span{font-family:var(--f-dot);font-size:12px;color:var(--ink-dim)}
+
+footer{border-top:1px dashed var(--line);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* reel + posters */
+.reel{background:var(--paper);padding:14px 14px 18px;display:grid;gap:12px}
+.reel video{width:100%;max-width:100%;aspect-ratio:4/3;display:block;background:#000;object-fit:cover}
+.reel .meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.reel h3{margin:0;font-family:var(--f-display);font-size:26px}
+.posterimg{width:100%;max-width:100%;aspect-ratio:2/3;object-fit:cover;display:block;border:1px solid var(--line)}
+.credits{font-size:14px;color:var(--ink-dim);display:grid;gap:2px}
+.credits b{color:var(--ink);font-weight:500}
+.film .tag{font-family:var(--f-display);color:var(--riso);font-size:15px}
+.cover-img{width:100%;max-width:260px;justify-self:center;transform:rotate(-2deg);box-shadow:0 12px 30px rgba(0,0,0,.45);display:block}
+.excerpt .chap{font-family:var(--f-dot);font-size:12px;color:var(--ink-dim)}
+.excerpt blockquote{margin:0;font-family:var(--f-display);font-size:17px;line-height:1.85;max-width:60ch;display:grid;gap:12px}
+.excerpt blockquote p{margin:0}
+.excerpt .tagline{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,3vw,28px);margin:0}
+.fest{display:flex;flex-wrap:wrap;gap:6px}
+.fest span{font-family:var(--f-dot);font-size:11px;letter-spacing:.06em;color:var(--tape);border:1px dashed var(--tape);padding:1px 8px;border-radius:2px}
+.film .syn{color:var(--ink);font-size:15px;margin:0}
+.anime{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:14px}
+.anime a{text-decoration:none;display:grid;gap:6px;font-size:13px;line-height:1.35;color:var(--ink-dim)}
+.anime a:hover{color:var(--ink)}
+.anime img{width:100%;max-width:100%;aspect-ratio:2/3;object-fit:cover;display:block;border:1px solid var(--line);background:var(--paper-2)}
+.anime .nocover{aspect-ratio:2/3;background:var(--paper-2);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--f-display);font-size:14px;padding:8px;text-align:center;color:var(--ink)}
+.thumb{width:100%;max-width:100%;aspect-ratio:3/4;object-fit:cover;display:block;margin-bottom:8px;border:1px solid var(--line);background:var(--paper-2)}
+
+/* sound row */
+.sound{align-items:stretch}
+.mine{align-content:start;grid-template-rows:auto 1fr auto}
+.headshot{width:100%;max-width:100%;height:100%;min-height:260px;object-fit:cover;object-position:50% 30%;display:block;border:1px solid var(--line);filter:contrast(1.05)}
+.playlist{display:grid;gap:10px;grid-template-rows:auto 1fr}
+.spot{position:relative;min-height:480px;border:1px solid var(--line);background:var(--paper);overflow:hidden}
+.spot iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.spot-fallback{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-dot);font-size:14px;color:var(--ink-dim);text-decoration:none}
+.shelf{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+
+/* art gallery: prints taped to the desk */
+.gallery{columns:2 300px;column-gap:30px;max-width:900px}
+.print{break-inside:avoid;margin:0 0 30px;background:#f3ede2;padding:12px 12px 10px;position:relative;box-shadow:0 10px 24px rgba(0,0,0,.4);display:grid;gap:8px}
+.print:nth-child(3n+1){transform:rotate(-1deg)}
+.print:nth-child(3n+2){transform:rotate(.8deg)}
+.print:nth-child(3n){transform:rotate(-.4deg)}
+.print::before{content:"";position:absolute;top:-10px;left:50%;width:72px;height:20px;transform:translateX(-50%) rotate(2deg);background:var(--tape);opacity:.6}
+.print-open{all:unset;cursor:zoom-in;display:block}
+.print-open:focus-visible{outline:2px dashed var(--riso);outline-offset:4px}
+.print img{width:100%;max-width:100%;height:auto;display:block}
+.print figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:10px;color:#2a221d}
+.print .pt{font-family:var(--f-display);font-weight:700;font-size:16px}
+.print .dot{color:#7a6c60}
+.viewer{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);max-height:92vh;color:var(--ink)}
+.viewer::backdrop{background:rgba(18,14,12,.88)}
+.viewer img{display:block;max-width:100%;max-height:82vh;margin-inline:auto;background:#f3ede2;padding:10px}
+.viewer-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px}
+.viewer .pt{font-family:var(--f-display);font-weight:700;font-size:20px}
+
+/* phone under the novel */
+.cover-col{display:grid;gap:26px;justify-items:center}
+:root{--phone:#d9cdb6;--phone-edge:#8c7d6a}
+.phone{display:flex;align-items:center;gap:14px;max-width:340px;width:100%}
+.phone-btn{all:unset;cursor:pointer;width:150px;flex:none;color:var(--ink-dim);border-radius:6px}
+.phone-btn:focus-visible{outline:2px dashed var(--riso);outline-offset:4px}
+.phone-svg{width:100%;height:auto;display:block;overflow:visible}
+.phone .handset{transform-origin:120px 44px;transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+.phone .led{fill:#5a4f45}
+.phone.ringing .handset{animation:jiggle 1.6s ease-in-out infinite}
+.phone.ringing .led{fill:var(--riso)}
+.phone.live .handset{transform:translate(-6px,-22px) rotate(-14deg)}
+.phone.live .led{fill:#9fd39a}
+@keyframes jiggle{0%,40%,100%{transform:none}5%,15%,25%,35%{transform:translateY(-3px) rotate(-1.5deg)}10%,20%,30%{transform:translateY(-1px) rotate(1.5deg)}}
+.phone-text{display:grid;gap:2px;line-height:1.2}
+.hand{font-family:"Nanum Pen Script","Bradley Hand","Segoe Print",cursive}
+.phone-call{font-size:24px;color:var(--ink)}
+#phone-status{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* vhs shelf */
+.vhs{display:grid;gap:12px}
+.vhs-row{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:26px;align-items:end}
+.shelf-wood{display:flex;gap:6px;align-items:flex-end;padding:14px 12px 0;border-bottom:10px solid #5b4433;background:linear-gradient(#2a211c,#221a16);min-height:250px;justify-content:center}
+.tape{all:unset;cursor:pointer;width:38px;height:224px;background:#151210;border:1px solid #3b322b;border-radius:2px;position:relative;display:grid;justify-items:center;transition:transform .35s ease, opacity .35s}
+.tape:hover{transform:translateY(-8px)}
+.tape:focus-visible{outline:2px dashed var(--riso);outline-offset:3px}
+.tape.out{transform:translateY(-140%);opacity:0;pointer-events:none}
+.tape-label{writing-mode:vertical-rl;transform:rotate(180deg);background:#efe6d4;color:#2a221d;margin-top:12px;padding:8px 4px;width:26px;display:flex;justify-content:space-between;height:170px;border-left:3px solid var(--riso)}
+.tape:nth-child(2) .tape-label{border-left-color:var(--sky)}
+.tape:nth-child(3) .tape-label{border-left-color:var(--tape)}
+.tape:nth-child(4) .tape-label{border-left-color:#c9a2d6}
+.tape-label .hand{font-size:21px;line-height:1}
+.tape-meta{font-family:var(--f-dot);font-size:9px;letter-spacing:.06em;color:#6d6055}
+.tape-reel{position:absolute;bottom:10px;width:14px;height:14px;border-radius:50%;border:2px solid #3b322b}
+.tv{background:#2b2420;padding:16px 16px 12px;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,.45), inset 0 0 0 2px #3a312b;display:grid;gap:12px}
+.tv-screen{position:relative;aspect-ratio:16/10;max-width:100%;background:#0b0f12;border-radius:22px/16px;overflow:hidden}
+.tv-screen canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.tv-screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.82) contrast(1.08) sepia(.12)}
+.tv-glass{position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(rgba(0,0,0,.18) 0 1px,transparent 1px 3px),radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55) 100%);
+  box-shadow:inset 0 0 40px rgba(0,0,0,.6)}
+.tv-osd{position:absolute;left:18px;top:14px;right:18px;display:flex;justify-content:space-between;pointer-events:none;
+  font-family:var(--f-dot);font-size:clamp(14px,2.2vw,22px);color:#e8f0ff;text-shadow:0 0 6px rgba(160,200,255,.7);letter-spacing:.08em;transition:opacity .6s;z-index:2}
+.tv-screen.blue{background:#1d3fb8}
+.tv-screen.playing .tv-osd{opacity:0}
+.vcr{display:flex;align-items:center;gap:12px;background:#1a1613;border-radius:6px;padding:8px 12px}
+.vcr-slot{flex:1;height:10px;border-radius:3px;background:#0b0907;box-shadow:inset 0 2px 3px rgba(0,0,0,.8);min-width:0}
+.vcr-lcd{font-family:var(--f-dot);font-size:13px;color:#7fe0a8;text-shadow:0 0 6px rgba(127,224,168,.6);font-variant-numeric:tabular-nums;min-width:58px;text-align:center}
+.vcr-eject{all:unset;cursor:pointer;font-family:var(--f-dot);font-size:12px;color:var(--ink-dim);border:1px solid var(--line);padding:2px 10px;border-radius:3px}
+.vcr-eject:disabled{opacity:.35;cursor:default}
+.vcr-eject:focus-visible{outline:2px dashed var(--riso);outline-offset:2px}
+@media (max-width:700px){.vhs-row{grid-template-columns:1fr}.shelf-wood{order:2;min-height:0}.tape{height:170px}.tape-label{height:120px}}
+
+/* light box */
+.lightbox{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:28px;align-items:start}
+.tin{background:linear-gradient(160deg,#4a4038,#2d2621);border-radius:10px;padding:22px 18px;display:grid;gap:14px;box-shadow:0 14px 30px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.08)}
+.tin-label{background:#efe6d4;color:#2a221d;padding:10px 12px;display:grid;gap:2px;transform:rotate(-1.5deg)}
+.tin-label .hand{font-size:34px;line-height:1}
+.tin-label .dot{color:#6d6055}
+.lb-reset{all:unset;cursor:pointer;justify-self:start;text-decoration:underline;text-underline-offset:3px}
+.lb-reset:focus-visible{outline:2px dashed var(--riso);outline-offset:2px}
+.desk{position:relative;min-height:440px;border:1px dashed var(--line);border-radius:4px;overflow:hidden}
+.print-lb{position:absolute;width:min(56%,420px);background:#f6f1e8;padding:10px 10px 30px;box-shadow:0 12px 26px rgba(0,0,0,.5);transition:transform .7s cubic-bezier(.2,1,.3,1), opacity .5s}
+.print-lb img{display:block;width:100%;height:auto}
+.print-lb .stamp-date{position:absolute;right:16px;bottom:38px;font-family:var(--f-dot);font-size:12px;color:#ff8a3d;text-shadow:0 0 3px rgba(255,120,40,.6);letter-spacing:.06em}
+@media (max-width:700px){.lightbox{grid-template-columns:1fr}.print-lb{width:72%}.desk{min-height:340px}}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* radio */
+.radio{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:0;background:linear-gradient(170deg,#cfc2a8,#b9aa8e);border-radius:16px;padding:16px;box-shadow:0 16px 34px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.4);color:#2a221d;max-width:860px}
+.radio-grille{border-radius:10px;margin-right:16px;position:relative;
+  background:radial-gradient(circle,#3a312b 1.6px,transparent 2px) 0 0/9px 9px, #7c6d5a;box-shadow:inset 0 2px 6px rgba(0,0,0,.45);min-height:150px}
+.radio-brand{position:absolute;left:12px;bottom:10px;font-family:var(--f-dot);font-size:11px;letter-spacing:.12em;color:#efe6d4;background:#2a221d;padding:1px 8px;border-radius:2px}
+.radio-face{display:grid;gap:14px;min-width:0}
+.radio-window{position:relative;height:96px;background:linear-gradient(#f4ead2,#e8dcbd);border-radius:6px;box-shadow:inset 0 2px 8px rgba(0,0,0,.35);overflow:hidden}
+.radio-scale{position:absolute;inset:0 14px}
+.radio-scale .tick{position:absolute;bottom:22px;width:1px;background:#6d6055}
+.radio-scale .num{position:absolute;bottom:4px;transform:translateX(-50%);font-family:var(--f-dot);font-size:11px;color:#4a3d35}
+.radio-scale .st{position:absolute;top:8px;transform:translateX(-50%);font-family:"Nanum Pen Script",cursive;font-size:17px;color:#b34a5e;white-space:nowrap}
+.radio-scale .st.low{top:32px}
+.radio-scale .st.edge-l{transform:translateX(-18%)}
+.radio-scale .st.edge-r{transform:translateX(-82%)}
+.radio-scale .st.edge-l::after{left:18%}
+.radio-scale .st.edge-r::after{left:82%}
+@media (max-width:640px){.radio-scale .st{font-size:0;top:40px}.radio-scale .st::after{top:0;left:0!important;width:6px;height:6px;border-radius:50%;margin-left:-3px}}
+.radio-scale .st::after{content:"";position:absolute;left:50%;top:22px;width:2px;height:10px;background:#b34a5e}
+#radio-tune{position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%;margin:0;padding:0 14px;box-sizing:border-box;background:transparent;-webkit-appearance:none;appearance:none;cursor:ew-resize}
+#radio-tune:focus-visible{outline:2px dashed #b34a5e;outline-offset:-4px}
+#radio-tune::-webkit-slider-runnable-track{height:96px;background:transparent}
+#radio-tune::-moz-range-track{height:96px;background:transparent}
+#radio-tune::-webkit-slider-thumb{-webkit-appearance:none;width:3px;height:96px;background:#d4322e;box-shadow:0 0 6px rgba(212,50,46,.6);border:0}
+#radio-tune::-moz-range-thumb{width:3px;height:96px;background:#d4322e;border:0;border-radius:0}
+.radio-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.radio-power{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-family:var(--f-dot);font-size:13px;background:#2a221d;color:#efe6d4;padding:6px 12px;border-radius:4px}
+.radio-power:focus-visible{outline:2px dashed #b34a5e;outline-offset:2px}
+.radio-led{width:8px;height:8px;border-radius:50%;background:#5a4f45}
+.radio.on .radio-led{background:#ff6b4a;box-shadow:0 0 8px #ff6b4a}
+.radio-readout{flex:1;min-width:0;font-family:var(--f-dot);font-size:14px;background:#2a221d;color:#7fe0a8;padding:6px 10px;border-radius:4px;text-shadow:0 0 6px rgba(127,224,168,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums}
+.radio:not(.on) .radio-readout{color:#4f6b5a;text-shadow:none}
+.radio-knob{width:62px;height:62px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#5a4d42,#2a221d);box-shadow:0 4px 8px rgba(0,0,0,.4), inset 0 0 0 4px #3a3029;position:relative;flex:none}
+.radio-knob span{position:absolute;left:50%;top:6px;width:3px;height:14px;margin-left:-1.5px;background:#efe6d4;border-radius:2px}
+@media (max-width:640px){.radio{grid-template-columns:1fr}.radio-grille{margin:0 0 14px;min-height:70px}}
+
+/* flipbook */
+.book-wrap{display:grid;gap:12px;margin-top:10px}
+.book-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.book-stage{position:relative;perspective:2400px;display:grid;place-items:center;padding:10px 0 4px;outline:none}
+.book-stage:focus-visible{outline:2px dashed var(--riso);outline-offset:6px}
+.book{position:relative;width:min(100%,860px);aspect-ratio:1.25/1;transition:transform .7s cubic-bezier(.3,.8,.3,1);max-width:100%}
+.book.closed{transform:translateX(-25%)}
+.book.ended{transform:translateX(25%)}
+.leaf{position:absolute;top:0;left:50%;width:50%;height:100%;transform-origin:0 50%;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.4,.1,.2,1);cursor:pointer}
+.leaf.flipped{transform:rotateY(-180deg)}
+.leaf .side{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fbf8f2;overflow:hidden}
+.leaf .side img{width:100%;height:100%;object-fit:cover;display:block}
+.leaf .front{box-shadow:inset 18px 0 24px -16px rgba(0,0,0,.35), 4px 6px 16px rgba(0,0,0,.4)}
+.leaf .back{transform:rotateY(180deg);box-shadow:inset -18px 0 24px -16px rgba(0,0,0,.35), -4px 6px 16px rgba(0,0,0,.4)}
+.leaf .blank{background:#f4efe6}
+.book-ctrl{display:flex;justify-content:center;gap:12px}
+.book-ctrl .btn:disabled{opacity:.35;cursor:default}
+/* phones: one page at a time */
+.book .solo{display:none}
+.book.single{aspect-ratio:0.625/1;width:min(100%,420px);transform:none!important}
+.book.single .leaf{display:none}
+.book.single .solo{display:block;width:100%;height:100%;object-fit:cover;background:#fbf8f2;box-shadow:0 10px 24px rgba(0,0,0,.45)}
+
+/* back issues */
+.back-link{text-decoration:none;color:var(--riso)!important}
+.issue-row{display:flex;gap:18px;flex-wrap:wrap}
+.zine{width:150px;aspect-ratio:3/4;background:var(--paper);border:1px solid var(--line);padding:14px;display:grid;align-content:space-between;text-decoration:none;position:relative}
+.zine.current{background:#efe6d4;color:#2a221d;transform:rotate(-2deg);box-shadow:0 10px 22px rgba(0,0,0,.45)}
+.zine.current .dot{color:#6d6055}
+.zine-no{font-family:var(--f-display);font-weight:800;font-size:44px;line-height:1}
+.zine-name{font-family:var(--f-display);font-weight:700;font-size:18px}
+.zine-tag{font-family:var(--f-dot);font-size:11px;color:#b34a5e}
+.zine.empty{border-style:dashed;background:transparent;opacity:.55}
+
+/* drift visualizer */
+.drift-player{margin:0;position:relative;background:#120e0c;border:1px solid var(--line);overflow:hidden;display:grid}
+.drift-player canvas{display:block;width:100%;height:clamp(300px,52vw,520px);max-width:100%}
+.drift-over{position:absolute;left:0;top:0;padding:20px 22px;display:flex;gap:16px;align-items:center;pointer-events:none}
+.drift-play{pointer-events:auto;width:58px;height:58px;border-radius:50%;border:1.5px solid var(--ink);background:rgba(25,20,18,.55);color:var(--ink);
+  display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s,transform .2s;backdrop-filter:blur(4px)}
+.drift-play:hover{background:var(--ink);color:var(--desk);transform:scale(1.05)}
+.drift-meta{display:grid;gap:0;line-height:1.2}
+.drift-title{font-family:var(--f-display);font-weight:800;font-size:clamp(26px,4vw,40px);color:var(--ink)}
+.drift-by{font-family:var(--f-dot);font-size:13px;color:var(--riso)}
+.drift-bar{position:absolute;left:0;right:0;bottom:0;display:flex;gap:12px;align-items:center;padding:12px 18px;
+  background:linear-gradient(transparent,rgba(18,14,12,.85))}
+.drift-time{font-family:var(--f-dot);font-size:12px;color:var(--ink-dim);font-variant-numeric:tabular-nums;min-width:34px}
+#drift-seek{flex:1;min-width:0;accent-color:var(--riso);height:3px}
+.drift-hint{position:absolute;right:18px;top:24px;margin:0;transition:opacity .6s}
+.drift-player.playing .drift-hint{opacity:0}
+@media (max-width:560px){.drift-hint{display:none}.drift-over{padding:16px}.drift-play{width:50px;height:50px}}
+
+/* gentle drift */
+@keyframes drift{0%,100%{transform:translate(.04em,.03em) rotate(-1.5deg)}50%{transform:translate(.08em,-.02em) rotate(-.5deg)}}
+.mast h1 .drift{animation:drift 7s ease-in-out infinite}
+</style>
+</head>
+<body>
+
+<div class="spine" aria-hidden="true">漂流中　ゴーンアドリフト　サンディエゴ</div>
+
+<main class="wrap">
+
+  <header class="mast">
+    <div>
+      <h1>gone<span class="drift">adrift</span></h1>
+      <div class="kana">漂 流 中</div>
+    </div>
+    <div class="issue">
+      <span class="dot">issue no.</span>
+      <b>01</b>
+      <span class="dot">autumn 2026 · san diego</span>
+      <a class="dot back-link" href="#issues">back issues ↓</a>
+    </div>
+  </header>
+
+  <nav class="index" aria-label="Sections">
+    <a href="#films"><span>壱</span> films</a>
+    <a href="#sound"><span>弐</span> sound</a>
+    <a href="#shelf"><span>参</span> the shelf</a>
+    <a href="#writing"><span>肆</span> writing</a>
+    <a href="#about"><span>伍</span> about</a>
+    <a href="#art"><span>陸</span> art</a>
+    <a href="#light"><span>漆</span> light box</a>
+    <a href="#elsewhere"><span>捌</span> elsewhere</a>
+  </nav>
+
+  <section class="hello" aria-label="Introduction">
+    <p class="lede">hi, i'm <em>alijah</em>. i make quiet films, write about dreams, and compose out of san diego. this is where i keep what i've made and what made me.</p>
+    <div class="now taped">
+      <span class="stamp">right now</span>
+      <ul>
+        <li>training to become a medical assistant</li>
+        <li><i>adrift</i> screened at SDFFF and Hidden City 2025</li>
+        <li>on the radio: eight of my songs, 89.1 to 105.9</li>
+        <li>last five-star watch: <i>call me chihiro</i></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="films">
+    <div class="sec-head"><h2>films</h2><span class="jp">映画</span><span class="dot">things i shot</span></div>
+    <article class="reel taped">
+      <video src="reel.mp4" poster="images/reel-poster.jpg" controls playsinline preload="metadata"></video>
+      <div class="meta"><h3>Director's Reel</h3><span class="dot">0:42 · press play for sound</span></div>
+    </article>
+    <div class="films">
+      <article class="film">
+        <img class="posterimg" src="images/adrift-poster.jpg" alt="Adrift poster: a grainy black-and-white face in profile under the title ADRIFT, with 漂流して in black and red below" loading="lazy">
+        <div class="meta"><h3>Adrift</h3><span class="tag">漂流して</span><span class="dot">2025 · 12 min</span></div>
+        <p class="syn">A novice astral projector seeks out his grandmother's advice after meeting a strange woman in a place beyond ordinary reality.</p>
+        <div class="fest"><span>san diego filipino film festival 2025</span><span>hidden city film festival 2025</span></div>
+        <div class="credits">
+          <span>A Twice Removed Production</span>
+          <span>written, produced &amp; directed by <b>Alijah Jacob Buada</b></span>
+          <span>starring <b>Trung To · Hau'oli Carr · Gingerlily Lowe</b></span>
+        </div>
+        <a class="btn" href="https://youtu.be/3nGOkiEUVNc" target="_blank" rel="noopener">watch on youtube ↗</a>
+      </article>
+      <article class="film">
+        <img class="posterimg" src="images/awaken-poster.jpg" alt="Awaken poster: a young woman and an older bearded man sit back to back in black and white" loading="lazy">
+        <div class="meta"><h3>Awaken</h3><span class="tag">debut film</span><span class="dot">2023 · 9 min</span></div>
+        <p class="syn">A young girl living with delusion and a weary local keep returning to their favorite bench by the sea.</p>
+        <div class="fest"><span>world premiere · san diego filipino film festival 2023</span></div>
+        <div class="credits">
+          <span>A Twice Removed Production</span>
+          <span>written, produced &amp; directed by <b>Alijah Jacob Buada</b></span>
+          <span>starring <b>Hau'oli Carr · Ova Saopeng · Trung To · Julian Natividad</b></span>
+        </div>
+        <a class="btn" href="https://youtu.be/u83tIiP_qEE" target="_blank" rel="noopener">watch on youtube ↗</a>
+      </article>
+    </div>
+    <div class="vhs">
+      <div class="vhs-head"><span class="dot">tapes · <b style="color:var(--ink)">ADRIFT</b>, the series · pick one off the shelf</span></div>
+      <div class="vhs-row">
+        <div class="shelf-wood" role="group" aria-label="Tapes">
+          <button type="button" class="tape" data-id="Q38yUZ8LtzU" data-ep="1" aria-label="Play ADRIFT episode 1">
+            <span class="tape-label"><span class="hand">ADRIFT ep. 1</span><span class="tape-meta">T-120 · SP</span></span>
+            <span class="tape-reel" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="tape" data-id="wcL6OE3n0y4" data-ep="2" aria-label="Play ADRIFT episode 2">
+            <span class="tape-label"><span class="hand">ADRIFT ep. 2</span><span class="tape-meta">T-120 · SP</span></span>
+            <span class="tape-reel" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="tape" data-id="v8251FEpo-w" data-ep="3" aria-label="Play ADRIFT episode 3">
+            <span class="tape-label"><span class="hand">ADRIFT ep. 3</span><span class="tape-meta">T-120 · SP</span></span>
+            <span class="tape-reel" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="tape" data-id="VRQrR1VFbtw" data-ep="4" aria-label="Play ADRIFT episode 4">
+            <span class="tape-label"><span class="hand">ADRIFT ep. 4</span><span class="tape-meta">T-120 · SP</span></span>
+            <span class="tape-reel" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="tv">
+          <div class="tv-screen" id="tv-screen">
+            <canvas id="tv-static" aria-hidden="true"></canvas>
+            <div class="tv-osd" id="tv-osd"><span>CH 03</span><span id="tv-msg">insert a tape</span></div>
+            <div class="tv-glass" aria-hidden="true"></div>
+          </div>
+          <div class="vcr">
+            <span class="vcr-slot" id="vcr-slot" aria-hidden="true"></span>
+            <span class="vcr-lcd" id="vcr-lcd">--:--</span>
+            <button type="button" class="vcr-eject" id="vcr-eject" disabled>⏏ eject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="link taped" href="https://www.youtube.com/@alijahbuada" target="_blank" rel="noopener" style="justify-self:start;padding:18px 24px"><b>more on my youtube ↗</b><span>@alijahbuada · shorts, the reel, whatever's next</span></a>
+  </section>
+
+  <section id="sound">
+    <div class="sec-head"><h2>sound</h2><span class="jp">音</span><span class="dot">mine, then theirs</span></div>
+    <figure class="drift-player" id="drift">
+      <canvas id="drift-canvas" aria-hidden="true"></canvas>
+      <div class="drift-over">
+        <button class="drift-play" id="drift-play" type="button" aria-label="Play More Than Words">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path id="drift-icon" d="M8 5v14l11-7z" fill="currentColor"/></svg>
+        </button>
+        <div class="drift-meta">
+          <span class="dot">now playing · original composition</span>
+          <span class="drift-title">more than words</span>
+          <span class="drift-by">Alijah Jacob</span>
+        </div>
+      </div>
+      <div class="drift-bar">
+        <span class="drift-time" id="drift-cur">0:00</span>
+        <input type="range" id="drift-seek" min="0" max="1000" value="0" step="1" aria-label="Seek">
+        <span class="drift-time" id="drift-dur">2:02</span>
+      </div>
+      <figcaption class="drift-hint dot" id="drift-hint">press play · the sand moves with the song</figcaption>
+      <audio id="drift-audio" src="audio/more-than-words.mp3" preload="metadata"></audio>
+    </figure>
+    <div class="sound">
+      <div class="mine taped">
+        <div>
+          <span class="dot">my music, as</span>
+          <div class="name">Alijah Jacob</div>
+          <p class="dot" style="margin:2px 0 0">original compositions on spotify</p>
+        </div>
+        <img class="headshot" src="images/headshot.jpg" alt="Alijah in a black turtleneck, smiling, pine trees behind him" loading="lazy">
+        <a class="btn" href="https://open.spotify.com/playlist/2rz3Qb2VThDWyahZ92ASf0" target="_blank" rel="noopener">listen on spotify ↗</a>
+      </div>
+      <div class="playlist">
+        <p class="dot" style="margin:0">on repeat · <b style="color:var(--ink)">ALIJAH JACOB</b> · updates with the playlist</p>
+        <div class="spot">
+          <a class="spot-fallback" href="https://open.spotify.com/playlist/2rz3Qb2VThDWyahZ92ASf0" target="_blank" rel="noopener">open the playlist on spotify ↗</a>
+          <iframe title="ALIJAH JACOB playlist on Spotify" src="https://open.spotify.com/embed/playlist/2rz3Qb2VThDWyahZ92ASf0?utm_source=generator&amp;theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="radio" id="radio">
+      <div class="radio-grille" aria-hidden="true"><span class="radio-brand">AJ-88 · FM</span></div>
+      <div class="radio-face">
+        <div class="radio-window">
+          <div class="radio-scale" id="radio-scale" aria-hidden="true"></div>
+          <label class="sr" for="radio-tune">Tune the radio</label>
+          <input type="range" id="radio-tune" min="88" max="108" step="0.1" value="88.5">
+        </div>
+        <div class="radio-row">
+          <button type="button" class="radio-power" id="radio-power" aria-pressed="false"><span class="radio-led"></span>power</button>
+          <span class="radio-readout" id="radio-readout">FM 88.5 · static</span>
+          <div class="radio-knob" id="radio-knob" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shelf">
+    <div class="sec-head"><h2>the shelf</h2><span class="jp">本棚</span><span class="dot">gold standards</span></div>
+    <div class="shelf">
+      <div class="card gold"><img class="thumb" src="https://a.ltrbxd.com/resized/film-poster/8/7/9/2/2/9/879229-perfect-days-0-460-0-690-crop.jpg?v=4ea80661fd" alt="Perfect Days poster" loading="lazy" onerror="this.remove()"><span class="kind">film</span><span class="what">Perfect Days</span><span class="by">Wim Wenders, 2023</span></div>
+      <div class="card gold"><img class="thumb" src="https://cdn.myanimelist.net/images/anime/11/75274.jpg" alt="Bakemonogatari key art" loading="lazy" onerror="this.remove()"><span class="kind">anime</span><span class="what">Bakemonogatari</span><span class="by">Shaft</span></div>
+      <div class="card gold"><img class="thumb" src="https://cdn.myanimelist.net/images/manga/1/260654.jpg" alt="Omoide Emanon cover" loading="lazy" onerror="this.remove()"><span class="kind">manga</span><span class="what">Omoide Emanon</span><span class="by">Shinji Kajio, Kenji Tsuruta</span></div>
+      <div class="card gold"><img class="thumb" src="https://upload.wikimedia.org/wikipedia/en/8/8e/1Q84bookcover.png" alt="1Q84 cover" loading="lazy" onerror="this.remove()"><span class="kind">book</span><span class="what">1Q84</span><span class="by">Haruki Murakami</span></div>
+      <div class="card gold"><img class="thumb" src="https://japanhousela.com/wp-content/uploads/2025/02/A-Un-by-Yuji-Moriguchi.jpg" alt="A-Un by Yuji Moriguchi: two schoolgirls astride komainu guardian statues" loading="lazy" onerror="this.remove()"><span class="kind">art</span><span class="what">Yuji Moriguchi</span><span class="by"><i>A-Un</i>, acrylic and gesso on canvas, 2016</span></div>
+      <div class="card gold"><img class="thumb" src="https://image.tmdb.org/t/p/w500/97ZIHh3HfiiS0KNrScRRhxOVzPg.jpg" alt="Anthony Bourdain: No Reservations poster" loading="lazy" onerror="this.remove()"><span class="kind">television</span><span class="what">No Reservations</span><span class="by">Anthony Bourdain, 2005–2012</span></div>
+    </div>
+
+    <div style="display:grid;gap:12px">
+      <p class="dot" style="margin:0">favorite anime · myanimelist</p>
+      <div class="anime">
+        <a href="https://myanimelist.net/anime/59062/Gachiakuta" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/1682/150432.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Gachiakuta&lt;/div&gt;'">Gachiakuta</a>
+        <a href="https://myanimelist.net/anime/59517/Chitose-kun_wa_Ramune_Bin_no_Naka" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/1015/151233.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Chitose&lt;/div&gt;'">Chitose Is in the Ramune Bottle</a>
+        <a href="https://myanimelist.net/anime/268/Golden_Boy" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/3/62867.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Golden Boy&lt;/div&gt;'">Golden Boy</a>
+        <a href="https://myanimelist.net/anime/3588/Soul_Eater" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/1071/149486.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Soul Eater&lt;/div&gt;'">Soul Eater</a>
+        <a href="https://myanimelist.net/anime/48849/Sonny_Boy" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/1509/117149.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Sonny Boy&lt;/div&gt;'">Sonny Boy</a>
+        <a href="https://myanimelist.net/anime/205/Samurai_Champloo" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/1370/135212.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Samurai Champloo&lt;/div&gt;'">Samurai Champloo</a>
+        <a href="https://myanimelist.net/anime/877/Nana" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/2/11232.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Nana&lt;/div&gt;'">Nana</a>
+        <a href="https://myanimelist.net/anime/6594/Katanagatari" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/1112/119225.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Katanagatari&lt;/div&gt;'">Katanagatari</a>
+        <a href="https://myanimelist.net/anime/5081/Bakemonogatari" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/11/75274.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Bakemonogatari&lt;/div&gt;'">Bakemonogatari</a>
+        <a href="https://myanimelist.net/anime/39535/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu" target="_blank" rel="noopener"><img src="https://cdn.myanimelist.net/images/anime/1530/117776.jpg" alt="" loading="lazy" onerror="this.outerHTML='&lt;div class=nocover&gt;Mushoku Tensei&lt;/div&gt;'">Mushoku Tensei</a>
+      </div>
+    </div>
+
+    <div class="lbx">
+      <div style="display:grid;gap:16px">
+        <p class="dot" style="margin:0">letterboxd top four</p>
+        <div class="four">
+          <a class="poster" style="padding:0;overflow:hidden" href="https://letterboxd.com/film/perfect-days-2023/" target="_blank" rel="noopener"><img style="width:100%;height:100%;object-fit:cover" src="https://a.ltrbxd.com/resized/film-poster/8/7/9/2/2/9/879229-perfect-days-0-460-0-690-crop.jpg?v=4ea80661fd" alt="Perfect Days (2023)" loading="lazy" onerror="this.outerHTML='&lt;div style=padding:10px&gt;Perfect Days&lt;/div&gt;'"></a>
+          <a class="poster" style="padding:0;overflow:hidden" href="https://letterboxd.com/film/open-house-1998/" target="_blank" rel="noopener"><img style="width:100%;height:100%;object-fit:cover" src="https://a.ltrbxd.com/resized/film-poster/2/3/4/2/2/6/234226-open-house-0-460-0-690-crop.jpg?v=2a8933eb07" alt="Open House (1998)" loading="lazy" onerror="this.outerHTML='&lt;div style=padding:10px&gt;Open House&lt;/div&gt;'"></a>
+          <a class="poster" style="padding:0;overflow:hidden" href="https://letterboxd.com/film/burning-2018/" target="_blank" rel="noopener"><img style="width:100%;height:100%;object-fit:cover" src="https://a.ltrbxd.com/resized/film-poster/4/2/2/0/3/5/422035-burning-0-460-0-690-crop.jpg?v=34c9bc6300" alt="Burning (2018)" loading="lazy" onerror="this.outerHTML='&lt;div style=padding:10px&gt;Burning&lt;/div&gt;'"></a>
+          <a class="poster" style="padding:0;overflow:hidden" href="https://letterboxd.com/film/call-me-chihiro/" target="_blank" rel="noopener"><img style="width:100%;height:100%;object-fit:cover" src="https://a.ltrbxd.com/resized/film-poster/9/2/3/5/0/1/923501-call-me-chihiro-0-460-0-690-crop.jpg?v=093d8abb37" alt="Call Me Chihiro (2023)" loading="lazy" onerror="this.outerHTML='&lt;div style=padding:10px&gt;Call Me Chihiro&lt;/div&gt;'"></a>
+        </div>
+        <div class="stats">
+          <div><b>329</b><span class="dot">films logged</span></div>
+          <div><b>230</b><span class="dot">anime completed</span></div>
+        </div>
+      </div>
+      <div class="review taped">
+        <span class="dot">from my letterboxd · call me chihiro ★★★★★</span>
+        <blockquote>nobody explains chihiro to you. she just simply is. imaizumi builds the film the same way. scenes do not set up. they are already happening when you get there.</blockquote>
+        <a class="btn" href="https://letterboxd.com/ajbuada/" target="_blank" rel="noopener">more reviews ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing">
+    <div class="sec-head"><h2>writing</h2><span class="jp">文</span><span class="dot">pages</span></div>
+    <div class="writing">
+      <div class="cover-col">
+        <img class="cover-img" src="images/yumebito-cover.jpg" alt="Yumebito: Dream Person cover, illustrated man on a corded phone with a woman and a white cat" loading="lazy">
+        <div class="phone" id="phone">
+          <button type="button" class="phone-btn" id="phone-btn" aria-label="Pick up the phone">
+            <svg viewBox="0 0 220 150" class="phone-svg" aria-hidden="true">
+              <path class="cord" d="M58 70 C40 82, 36 96, 44 104 C52 112, 40 120, 48 128 C56 136, 44 142, 60 146 L96 146" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+              <g class="base">
+                <path d="M62 82 Q66 64 92 62 L150 62 Q174 64 178 82 L190 132 Q192 142 180 142 L60 142 Q48 142 50 132 Z" fill="var(--phone)" stroke="var(--phone-edge)" stroke-width="2"/>
+                <g fill="var(--phone-edge)">
+                  <rect x="94" y="84" width="12" height="9" rx="2"/><rect x="114" y="84" width="12" height="9" rx="2"/><rect x="134" y="84" width="12" height="9" rx="2"/>
+                  <rect x="94" y="99" width="12" height="9" rx="2"/><rect x="114" y="99" width="12" height="9" rx="2"/><rect x="134" y="99" width="12" height="9" rx="2"/>
+                  <rect x="94" y="114" width="12" height="9" rx="2"/><rect x="114" y="114" width="12" height="9" rx="2"/><rect x="134" y="114" width="12" height="9" rx="2"/>
+                </g>
+                <circle cx="164" cy="90" r="4" class="led"/>
+              </g>
+              <g class="handset">
+                <path d="M46 40 Q46 26 62 26 L176 26 Q192 26 192 40 L192 52 Q192 60 182 60 L168 60 Q160 60 158 52 L156 46 L82 46 L80 52 Q78 60 70 60 L56 60 Q46 60 46 52 Z" fill="var(--phone)" stroke="var(--phone-edge)" stroke-width="2"/>
+              </g>
+            </svg>
+          </button>
+          <div class="phone-text">
+            <span class="hand phone-call" id="phone-call">the phone is ringing</span>
+            <span class="dot" id="phone-status">pick up</span>
+          </div>
+        </div>
+      </div>
+      <div class="excerpt">
+        <span class="stamp">debut novel · 2026</span>
+        <p class="tagline">Memory is fragile. So is he.</p>
+        <p>In a quiet town, an unnamed man drifts through the soft routine of his life. Then a stranger calls his phone, a little girl appears at his door, and his dreams start to sharpen until dreaming and living can't be told apart.</p>
+        <a class="btn" href="#book">read the first pages ↓</a>
+      </div>
+    </div>
+    <div class="book-wrap" id="book">
+      <div class="book-head"><span class="dot">the first pages · flip with the arrows, a tap, or your keyboard</span><span class="dot" id="book-count"></span></div>
+      <div class="book-stage" id="book-stage" tabindex="0" aria-label="Yumebito sample. Use left and right arrow keys to turn pages.">
+        <div class="book" id="book-el"></div>
+      </div>
+      <div class="book-ctrl">
+        <button type="button" class="btn" id="book-prev" aria-label="Previous page">← back</button>
+        <button type="button" class="btn" id="book-next" aria-label="Next page">turn →</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-head"><h2>about</h2><span class="jp">自己紹介</span><span class="dot">the long version</span></div>
+    <div class="about">
+      <div class="bio">
+        <p>most of my ideas come to me while i'm asleep. i wake up, write down whatever's left, and spend months trying to find the rest of it.</p>
+        <p>i'm alijah jacob buada. i write, produce, and direct my own films. <i>adrift</i> is about a young man who learns to leave his body and finds a woman waiting on the other side. <i>awaken</i> is about two seeming strangers and a bench by the sea. my novel, <i>yumebito</i>, is about a man who can't tell anymore which of his lives is the dream. my music is the same thing without words: instrumental pieces somewhere between jazz and classical, written mostly at night, mostly alone. i never planned for everything to be about dreaming. it just keeps turning out that way.</p>
+        <p>the storytellers i learn from are the ones who pay attention: haruki murakami, anthony bourdain, eddie huang.</p>
+        <p>for four years i worked inside other people's memories. at your legacy your story, i digitized old analog media and helped turn it into memoirs and documentaries. you learn a lot about someone from what they chose to keep.</p>
+        <p>i studied film at san diego state. now i'm training to become a medical assistant. people find that surprising. to me it's the same work: paying attention to people. i'm still writing. i'm always still writing.</p>
+      </div>
+      <ol class="timeline">
+        <li><span class="when">in progress</span><div><h4>Medical Assistant program</h4><div class="org">Pima Medical Institute</div><p>Working toward my medical assistant certification.</p></div></li>
+        <li><span class="when">2023 – 2026</span><div><h4>Director of Production Operations</h4><div class="org">Your Legacy Your Story · San Diego</div><p>Oversaw multiple creative divisions and led a team of video editors. Ran production on biographies and family history books, led digitization, and brought tools like Monday.com and AI into the workflow.</p></div></li>
+        <li><span class="when">2022 – 2023</span><div><h4>Laboratory Operations Manager</h4><div class="org">Your Legacy Your Story · San Diego</div><p>Managed digitization projects from planning to delivery, tracked milestones and records, and solved workflow problems before they became delays.</p></div></li>
+        <li><span class="when">degree</span><div><h4>B.S. Television, Film &amp; New Media</h4><div class="org">San Diego State University</div><p>Emphasis in critical studies. Summa cum laude.</p></div></li>
+        <li><span class="when">ongoing</span><div><h4>Filmmaker, writer, composer</h4><div class="org">independent</div><p><i>Adrift</i>, <i>Awaken</i>, the novel <i>Yumebito</i>, and original music as Alijah Jacob.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="art">
+    <div class="sec-head"><h2>art</h2><span class="jp">画</span><span class="dot">drawings, pencil and charcoal</span></div>
+    <div class="gallery">
+        <figure class="print"><button type="button" class="print-open" data-src="images/drawing-2.jpg" data-title="tony" aria-label="View tony larger"><img src="images/drawing-2.jpg" alt="Pencil portrait of Anthony Bourdain looking straight ahead" width="1400" height="1400" loading="lazy"></button><figcaption><span class="pt">tony</span><span class="dot">no. 01</span></figcaption></figure>
+        <figure class="print"><button type="button" class="print-open" data-src="images/drawing-3.jpg" data-title="she" aria-label="View she larger"><img src="images/drawing-3.jpg" alt="A girl with very long black hair glances back over her shoulder" width="1082" height="1400" loading="lazy"></button><figcaption><span class="pt">she</span><span class="dot">no. 02</span></figcaption></figure>
+        <figure class="print"><button type="button" class="print-open" data-src="images/drawing-4.jpg" data-title="mon amour" aria-label="View mon amour larger"><img src="images/drawing-4.jpg" alt="Charcoal close-up of a face turned on its side, eyes half closed, hair falling across it" width="1400" height="1400" loading="lazy"></button><figcaption><span class="pt">mon amour</span><span class="dot">no. 03</span></figcaption></figure>
+        <figure class="print wide"><button type="button" class="print-open" data-src="images/drawing-5.jpg" data-title="logan" aria-label="View logan larger"><img src="images/drawing-5.jpg" alt="Charcoal study of a weathered hand gripping a wooden post" width="1400" height="1056" loading="lazy"></button><figcaption><span class="pt">logan</span><span class="dot">no. 04</span></figcaption></figure>
+    </div>
+    <dialog class="viewer" id="viewer" aria-label="Drawing">
+      <img id="viewer-img" alt="">
+      <div class="viewer-bar"><span class="pt" id="viewer-title"></span><button type="button" class="btn" id="viewer-close">close</button></div>
+    </dialog>
+  </section>
+
+  <section id="light">
+    <div class="sec-head"><h2>light box</h2><span class="jp">光</span><span class="dot">one at a time, no captions</span></div>
+    <div class="lightbox">
+      <div class="tin">
+        <span class="tin-label"><span class="hand">光</span><span class="dot">prints · by alijah</span></span>
+        <button type="button" class="btn" id="lb-pull">pull a photo</button>
+        <button type="button" class="lb-reset dot" id="lb-reset">put them back</button>
+        <span class="dot lb-count" id="lb-count"></span>
+      </div>
+      <div class="desk" id="lb-desk" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="elsewhere">
+    <div class="sec-head"><h2>elsewhere</h2><span class="jp">他</span><span class="dot">find me</span></div>
+    <div class="elsewhere">
+      <a class="link" href="https://letterboxd.com/ajbuada/" target="_blank" rel="noopener"><b>Letterboxd</b><span>ajbuada · films</span></a>
+      <a class="link" href="https://www.instagram.com/alijahbuada/" target="_blank" rel="noopener"><b>Instagram</b><span>@alijahbuada</span></a>
+      <a class="link" href="https://www.youtube.com/@alijahbuada" target="_blank" rel="noopener"><b>YouTube</b><span>@alijahbuada · films</span></a>
+      <a class="link" href="https://myanimelist.net/profile/samba27" target="_blank" rel="noopener"><b>MyAnimeList</b><span>samba27 · anime</span></a>
+      <a class="link" href="https://open.spotify.com/playlist/2rz3Qb2VThDWyahZ92ASf0" target="_blank" rel="noopener"><b>Spotify</b><span>alijah jacob · music</span></a>
+      <a class="link" href="https://alijahbuada.github.io/uncle-tony/" target="_blank" rel="noopener"><b>Uncle Tony</b><span>my media guide · a side project</span></a>
+      <a class="link" href="https://www.linkedin.com/in/alijahbuada" target="_blank" rel="noopener"><b>LinkedIn</b><span>alijahbuada · work</span></a>
+    </div>
+  </section>
+
+  <section id="issues" class="issues">
+    <div class="sec-head"><h2>back issues</h2><span class="jp">号</span><span class="dot">every big update gets its own issue</span></div>
+    <div class="issue-row">
+      <a class="zine current" href="#" aria-current="page"><span class="zine-no">01</span><span class="zine-name">goneadrift</span><span class="dot">autumn 2026</span><span class="zine-tag">you are here</span></a>
+      <div class="zine empty" aria-hidden="true"><span class="zine-no">02</span><span class="dot">not yet</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="dot">goneadrift · made in san diego</span>
+    <span class="dot">漂流中 · issue 01</span>
+  </footer>
+</main>
+
+<script>
+(function(){
+  const fig = document.getElementById('drift');
+  const cv = document.getElementById('drift-canvas');
+  const ctx = cv.getContext('2d');
+  const audio = document.getElementById('drift-audio');
+  const btn = document.getElementById('drift-play');
+  const icon = document.getElementById('drift-icon');
+  const seek = document.getElementById('drift-seek');
+  const cur = document.getElementById('drift-cur');
+  const dur = document.getElementById('drift-dur');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const css = getComputedStyle(document.documentElement);
+  const hex = v => { v = (css.getPropertyValue(v)||'').trim().replace('#',''); if(v.length===3) v=v.split('').map(c=>c+c).join(''); const n=parseInt(v||'ffffff',16); return [n>>16&255,n>>8&255,n&255]; };
+  const pal = [[hex('--ink'),0.55],[hex('--riso'),0.2],[hex('--sky'),0.13],[hex('--tape'),0.12]];
+  const pick = () => { let r=Math.random(), a=0; for(const [c,w] of pal){ a+=w; if(r<a) return c; } return pal[0][0]; };
+
+  let W=0,H=0,dpr=1,parts=[];
+  function size(){
+    dpr = Math.min(2, window.devicePixelRatio||1);
+    const r = cv.getBoundingClientRect(); W=r.width; H=r.height;
+    cv.width = Math.round(W*dpr); cv.height = Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.fillStyle='#120e0c'; ctx.fillRect(0,0,W,H);
+    initSand();
+  }
+
+  // audio graph, created on first play
+  let actx=null, an=null, freq=null, prev=null;
+  const NB=24, LO=1, HI=380;
+  const edges=Array.from({length:NB+1},(_,i)=>Math.round(LO*Math.pow(HI/LO,i/NB)));
+  const bandAvg=new Float32Array(NB), bandPeak=new Float32Array(NB).fill(0.05), exc=new Float32Array(NB);
+  let fluxAvg=0, fluxPeak=1, lvlMin=1, lvlMax=0, cool=0, level=0;
+  const rings=[];
+  function initAudio(){
+    if(actx) return;
+    try{
+      const AC = window.AudioContext||window.webkitAudioContext;
+      actx = new AC();
+      const src = actx.createMediaElementSource(audio);
+      an = actx.createAnalyser(); an.fftSize = 1024; an.smoothingTimeConstant = 0.55;
+      an.minDecibels = -90; an.maxDecibels = -20;
+      src.connect(an); an.connect(actx.destination);
+      freq = new Uint8Array(an.frequencyBinCount); prev = new Uint8Array(an.frequencyBinCount);
+    }catch(e){ an=null; }
+  }
+
+  // read the music: relative loudness, per-band "new energy", and note onsets
+  function listen(){
+    an.getByteFrequencyData(freq);
+    let tot=0, flux=0, best=0, bestB=0;
+    for(let i=LO;i<HI;i++){ const d=freq[i]-prev[i]; if(d>0) flux+=d; prev[i]=freq[i]; }
+    for(let b=0;b<NB;b++){
+      let s=0; const lo=edges[b], hi=Math.max(edges[b+1],lo+1);
+      for(let i=lo;i<hi;i++) s+=freq[i];
+      const e=s/((hi-lo)*255); tot+=e;
+      const ex=Math.max(0,e-bandAvg[b]);
+      bandAvg[b]=bandAvg[b]*0.88+e*0.12;
+      bandPeak[b]=Math.max(bandPeak[b]*0.996, ex, 0.03);
+      exc[b]=Math.min(1, ex/bandPeak[b]);
+      if(exc[b]*e>best){ best=exc[b]*e; bestB=b; }
+    }
+    const raw=tot/NB;
+    lvlMin += (raw<lvlMin ? 0.5 : 0.0015)*(raw-lvlMin);
+    lvlMax += (raw>lvlMax ? 0.5 : 0.0015)*(raw-lvlMax);
+    level = Math.min(1, Math.max(0, (raw-lvlMin)/(lvlMax-lvlMin+0.03)));
+    fluxAvg = fluxAvg*0.94 + flux*0.06;
+    fluxPeak = Math.max(fluxPeak*0.997, flux, 1);
+    if(cool>0) cool--;
+    let hit=0;
+    if(cool===0 && flux>fluxAvg*1.35 && flux>fluxPeak*0.22){
+      hit = Math.min(1.8, 0.5 + flux/(fluxAvg+1) * 0.45);
+      const x = W*(0.08 + 0.84*bestB/(NB-1)) + (Math.random()-0.5)*W*0.08;
+      const y = H*(0.22 + 0.56*Math.random());
+      rings.push({x,y,str:hit,age:0,c:pick()});
+      cool = 5;
+    }
+  }
+
+  let t=0, running=false, visible=true, raf=0;
+  // vibrating sand: grains on a plate bounce where it shakes and settle on the still lines (Chladni figures)
+  const MODES=[[1,2],[1,3],[2,3],[1,4],[3,4],[2,5],[1,5],[3,5],[4,5],[2,7],[3,7],[5,6],[4,7],[5,7],[6,7],[5,8],[7,8],[6,9]];
+  const COLS=[[hex('--ink'),0.62],[hex('--tape'),0.18],[hex('--riso'),0.12],[hex('--sky'),0.08]];
+  let N=0, gx, gy, gc, gs;
+  let modeA=MODES[2], modeB=MODES[2], mix=1, lastSwitch=-999, centS=0.3, jolt=0;
+  const PI=Math.PI;
+  function plate(x,y,m){ const [n,k]=m; return Math.cos(n*PI*x)*Math.cos(k*PI*y) - Math.cos(k*PI*x)*Math.cos(n*PI*y); }
+  function amp(x,y){ const fa=plate(x,y,modeA), fb=plate(x,y,modeB); return Math.abs(fa*(1-mix)+fb*mix)*0.5; }
+  function initSand(){
+    N = Math.round(Math.min(6000, Math.max(1800, W*H/70)));
+    gx=new Float32Array(N); gy=new Float32Array(N); gc=new Uint8Array(N); gs=new Float32Array(N);
+    for(let i=0;i<N;i++){
+      gx[i]=Math.random(); gy[i]=Math.random();
+      let r=Math.random(), acc=0; for(let c=0;c<COLS.length;c++){ acc+=COLS[c][1]; if(r<acc){ gc[i]=c; break; } }
+    }
+    for(let k=0;k<420;k++) shake(1.5, false);   // start as a settled figure
+  }
+  function shake(power, live){
+    const sx=1/W, sy=1/H;
+    for(let i=0;i<N;i++){
+      const A=amp(gx[i],gy[i]);
+      const step=power*A;
+      const dx=(Math.random()-0.5)*step*14*sx*Math.max(1,W/700), dy=(Math.random()-0.5)*step*14*sy*Math.max(1,H/350);
+      gx[i]+=dx; gy[i]+=dy;
+      if(gx[i]<0) gx[i]=-gx[i]; else if(gx[i]>1) gx[i]=2-gx[i];
+      if(gy[i]<0) gy[i]=-gy[i]; else if(gy[i]>1) gy[i]=2-gy[i];
+      if(live) gs[i]=gs[i]*0.6+step*0.4;
+    }
+  }
+  function frame(ts){
+    const manual = ts===true;
+    if(!manual) raf = 0;
+    const playing = !audio.paused;
+    t += 1;
+    let cent=centS;
+    if(playing && an){
+      listen();
+      // where the sound sits in the spectrum picks the figure
+      let sw=0, sb=0; for(let b=0;b<NB;b++){ const w=bandAvg[b]*bandAvg[b]; sw+=w; sb+=w*b; }
+      cent = sw>0 ? sb/sw/(NB-1) : centS;
+    } else if(playing){ level=0.5+0.4*Math.sin(t*0.04); cent=0.3+0.25*Math.sin(t*0.003); }
+    else { level*=0.9; }
+    centS = centS*0.97 + cent*0.03;
+    if(rings.length){ for(const r of rings) if(r.age===0) jolt=Math.max(jolt, Math.min(1.5,r.str)); }
+    for(let i=rings.length-1;i>=0;i--){ if(++rings[i].age>=2) rings.splice(i,1); }
+
+    // change figure when the music moves (on a note, or drifting pitch), but give the sand time to form
+    const want = MODES[Math.min(MODES.length-1, Math.max(0, Math.round(centS*1.6*(MODES.length-1))))];
+    if(playing && want!==modeB && mix>=1 && t-lastSwitch>50 && (jolt>0.6 || t-lastSwitch>150)){
+      modeA=modeB; modeB=want; mix=0; lastSwitch=t;
+    }
+    if(mix<1) mix=Math.min(1, mix+0.04);
+
+    const slow = reduce ? 0.35 : 1;
+    const power = playing ? (0.25 + level*1.6 + jolt*2.2)*slow : 0;
+    jolt*=0.82;
+    if(power>0.01) shake(power, true); else for(let i=0;i<N;i++) gs[i]*=0.8;
+
+    ctx.globalCompositeOperation='source-over';
+    ctx.fillStyle = 'rgba(18,14,12,0.55)';
+    ctx.fillRect(0,0,W,H);
+    const z = Math.max(1, Math.min(1.8, W/700));
+    const trem = playing ? (0.6 + level*1.8 + jolt*3)*z*slow : 0;
+    for(let c=0;c<COLS.length;c++){
+      const col=COLS[c][0];
+      for(let pass=0;pass<2;pass++){
+        // pass 0: resting grains, pass 1: grains that are jumping glow brighter
+        ctx.fillStyle = pass ? `rgba(${col[0]},${col[1]},${col[2]},0.95)` : `rgba(${col[0]},${col[1]},${col[2]},0.55)`;
+        for(let i=0;i<N;i++){
+          if(gc[i]!==c) continue;
+          const hot = gs[i]>0.18;
+          if(hot!==!!pass) continue;
+          const sz = hot ? 1.6*z : 1.1*z;
+          // a fine tremor on every grain while the music plays, so the whole plate hums
+          const tr = trem*(hot?2.2:1);
+          ctx.fillRect(gx[i]*W + (Math.random()-0.5)*tr, gy[i]*H + (Math.random()-0.5)*tr, sz, sz);
+        }
+      }
+    }
+    if(!playing) idle++; else idle=0;
+    if(!manual && running && visible && idle<40) raf = requestAnimationFrame(frame);
+  }
+  let idle=0;
+  function loop(){ idle=0;  if(!raf && visible){ raf = requestAnimationFrame(frame); } }
+
+  // keep a gentle idle drift; pause work when the panel is off screen
+  running = !reduce;
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if(visible && running) loop(); }).observe(fig);
+
+  const fmt = s => isFinite(s) ? Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0') : '0:00';
+  audio.addEventListener('loadedmetadata', () => { dur.textContent = fmt(audio.duration); });
+  audio.addEventListener('timeupdate', () => {
+    cur.textContent = fmt(audio.currentTime);
+    if(audio.duration && !seeking) seek.value = Math.round(audio.currentTime/audio.duration*1000);
+  });
+  let seeking=false;
+  seek.addEventListener('input', () => { seeking=true; if(audio.duration) cur.textContent = fmt(seek.value/1000*audio.duration); });
+  seek.addEventListener('change', () => { if(audio.duration) audio.currentTime = seek.value/1000*audio.duration; seeking=false; });
+
+  const setIcon = on => { icon.setAttribute('d', on ? 'M7 5h4v14H7zM13 5h4v14h-4z' : 'M8 5v14l11-7z'); btn.setAttribute('aria-label', on ? 'Pause More Than Words' : 'Play More Than Words'); };
+  btn.addEventListener('click', async () => {
+    initAudio();
+    try{ if(actx && actx.state==='suspended') await actx.resume(); }catch(e){}
+    if(audio.paused){ try{ await audio.play(); }catch(e){} } else audio.pause();
+  });
+  audio.addEventListener('play', () => { setIcon(true); fig.classList.add('playing'); running=true; loop(); });
+  audio.addEventListener('pause', () => { setIcon(false); fig.classList.remove('playing'); running=!reduce; if(running) loop(); });
+  audio.addEventListener('ended', () => { seek.value=0; });
+
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt=setTimeout(()=>{ size(); if(!running) for(let i=0;i<40;i++) frame(true); }, 150); });
+  size();
+  for(let i=0;i<40;i++) frame(true);   // settle a visible resting frame
+  if(running) loop();
+})();
+</script>
+
+<script>
+(function(){
+  const d=document.getElementById('viewer'), img=document.getElementById('viewer-img'), ttl=document.getElementById('viewer-title');
+  document.querySelectorAll('.print-open').forEach(b=>b.addEventListener('click',()=>{
+    img.src=b.dataset.src; img.alt=b.querySelector('img').alt; ttl.textContent=b.dataset.title;
+    if(d.showModal) d.showModal(); else window.open(b.dataset.src,'_blank');
+  }));
+  document.getElementById('viewer-close').addEventListener('click',()=>d.close());
+  d.addEventListener('click',e=>{ if(e.target===d) d.close(); });
+})();
+</script>
+
+<script>
+/* phone: room tone and someone breathing on the line, synthesized in the browser */
+(function(){
+  const box=document.getElementById('phone'), btn=document.getElementById('phone-btn'),
+        call=document.getElementById('phone-call'), status=document.getElementById('phone-status');
+  let ac=null, nodes=[], live=false, started=0, timer=0, breathT=0, ringT=0;
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // ring now and then while it sits on the page
+  function ringCycle(){ if(live) return; box.classList.add('ringing'); call.textContent='the phone is ringing'; status.textContent='pick up';
+    ringT=setTimeout(()=>{ box.classList.remove('ringing'); call.textContent='no one picked up'; ringT=setTimeout(ringCycle, 9000); }, 7000); }
+  if(!reduce) ringCycle(); else { call.textContent='the phone is ringing'; }
+
+  function noiseBuf(kind, secs){
+    const len=ac.sampleRate*secs, b=ac.createBuffer(1,len,ac.sampleRate), d=b.getChannelData(0);
+    let last=0; for(let i=0;i<len;i++){ const w=Math.random()*2-1; if(kind==='brown'){ last=(last+0.02*w)/1.02; d[i]=last*3.5; } else d[i]=w; }
+    return b;
+  }
+  function loopSrc(buf){ const s=ac.createBufferSource(); s.buffer=buf; s.loop=true; s.start(); nodes.push(s); return s; }
+  function pickup(){
+    const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return;
+    ac=new AC(); nodes=[];
+    // telephone line: narrow band, a little hum and hiss
+    const line=ac.createBiquadFilter(); line.type='bandpass'; line.frequency.value=1100; line.Q.value=0.55;
+    const master=ac.createGain(); master.gain.value=0; master.gain.linearRampToValueAtTime(0.9, ac.currentTime+0.25);
+    line.connect(master); master.connect(ac.destination);
+    const room=loopSrc(noiseBuf('brown',3)); const rg=ac.createGain(); rg.gain.value=0.22; room.connect(rg); rg.connect(line);
+    const hiss=loopSrc(noiseBuf('white',2)); const hg=ac.createGain(); hg.gain.value=0.012; hiss.connect(hg); hg.connect(line);
+    const hum=ac.createOscillator(); hum.frequency.value=60; const humg=ac.createGain(); humg.gain.value=0.006; hum.connect(humg); humg.connect(master); hum.start(); nodes.push(hum);
+    // the click of the handset
+    const ck=ac.createBufferSource(); ck.buffer=noiseBuf('white',0.04); const ckg=ac.createGain(); ckg.gain.value=0.5; ck.connect(ckg); ckg.connect(master); ck.start();
+    // breathing: filtered noise swelling in and out, never quite regular
+    const breath=loopSrc(noiseBuf('white',2));
+    const bf=ac.createBiquadFilter(); bf.type='bandpass'; bf.Q.value=0.9; bf.frequency.value=800;
+    const bg=ac.createGain(); bg.gain.value=0; breath.connect(bf); bf.connect(bg); bg.connect(line);
+    let at=ac.currentTime+1.6;
+    function schedule(){
+      if(!live) return;
+      while(at < ac.currentTime+6){
+        const inh=1.1+Math.random()*0.6, hold=0.25+Math.random()*0.35, exh=1.5+Math.random()*0.8, rest=1.0+Math.random()*2.2;
+        const vol=0.28+Math.random()*0.12;
+        bf.frequency.setValueAtTime(950+Math.random()*200, at);
+        bg.gain.setValueAtTime(0, at); bg.gain.linearRampToValueAtTime(vol*0.75, at+inh*0.7); bg.gain.linearRampToValueAtTime(0.02, at+inh);
+        const ex=at+inh+hold;
+        bf.frequency.setValueAtTime(620+Math.random()*120, ex);
+        bg.gain.setValueAtTime(0.02, ex); bg.gain.linearRampToValueAtTime(vol, ex+exh*0.25); bg.gain.exponentialRampToValueAtTime(0.001, ex+exh);
+        at=ex+exh+rest;
+      }
+      breathT=setTimeout(schedule, 2000);
+    }
+    live=true; schedule();
+    started=Date.now();
+    timer=setInterval(()=>{ const s=Math.floor((Date.now()-started)/1000); status.textContent='on the line · '+Math.floor(s/60)+':'+String(s%60).padStart(2,'0'); }, 500);
+  }
+  function hangup(){
+    live=false; clearTimeout(breathT); clearInterval(timer);
+    if(ac){ const a=ac; try{ a.close(); }catch(e){} ac=null; }
+    box.classList.remove('live'); btn.setAttribute('aria-label','Pick up the phone');
+    call.textContent='they hung up first'; status.textContent='pick up';
+    clearTimeout(ringT); ringT=setTimeout(()=>{ if(!reduce) ringCycle(); }, 12000);
+  }
+  btn.addEventListener('click',()=>{
+    if(live){ hangup(); return; }
+    clearTimeout(ringT); box.classList.remove('ringing'); box.classList.add('live');
+    btn.setAttribute('aria-label','Hang up the phone');
+    call.textContent='hello?'; status.textContent='on the line · 0:00';
+    pickup();
+  });
+})();
+
+/* vhs: pick a tape, it goes in, the tv tracks, then it plays */
+(function(){
+  const screen=document.getElementById('tv-screen'), cv=document.getElementById('tv-static'), cx=cv.getContext('2d'),
+        msg=document.getElementById('tv-msg'), lcd=document.getElementById('vcr-lcd'), eject=document.getElementById('vcr-eject');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let mode='static', raf=0, visible=true, frame=null, current=null, loadT=0, clock=0;
+  const w=160, h=100; cv.width=w; cv.height=h; const img=cx.createImageData(w,h);
+  function drawStatic(){
+    const d=img.data; for(let i=0;i<d.length;i+=4){ const v=Math.random()*200|0; d[i]=v; d[i+1]=v; d[i+2]=v+10; d[i+3]=255; }
+    cx.putImageData(img,0,0);
+    if(mode==='tracking'){ cx.fillStyle='rgba(0,0,0,.55)'; const y=(performance.now()/6)%h; cx.fillRect(0,y,w,14); }
+  }
+  function tick(){ raf=0; if(mode==='static'||mode==='tracking'){ drawStatic(); if(visible && !reduce) raf=requestAnimationFrame(tick); } }
+  function start(){ if(!raf && visible) raf=requestAnimationFrame(tick); }
+  new IntersectionObserver(es=>{ visible=es[0].isIntersecting; if(visible) start(); }).observe(screen);
+  drawStatic();
+
+  function setLCD(t){ lcd.textContent=t; }
+  function play(tape){
+    if(current) current.classList.remove('out');
+    current=tape; tape.classList.add('out');
+    clearTimeout(loadT); if(frame){ frame.remove(); frame=null; }
+    screen.classList.remove('playing'); cv.hidden=false;
+    // load: blue screen, then tracking noise, then the tape
+    mode='blue'; screen.classList.add('blue'); cv.hidden=true; msg.textContent='▶ PLAY'; setLCD('LOAD');
+    loadT=setTimeout(()=>{
+      mode='tracking'; screen.classList.remove('blue'); cv.hidden=false; start(); setLCD('0:00:00');
+      loadT=setTimeout(()=>{
+        mode='play'; cv.hidden=true; msg.textContent='▶ PLAY  SP';
+        frame=document.createElement('iframe');
+        frame.title='ADRIFT episode '+tape.dataset.ep;
+        frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+        frame.setAttribute('allowfullscreen','');
+        frame.src='https://www.youtube-nocookie.com/embed/'+tape.dataset.id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+        screen.insertBefore(frame, screen.querySelector('.tv-osd'));
+        setTimeout(()=>screen.classList.add('playing'), 2500);
+        clock=Date.now(); tickLCD();
+      }, reduce?200:1100);
+    }, reduce?200:900);
+    eject.disabled=false;
+  }
+  function tickLCD(){ if(mode!=='play') return; const s=Math.floor((Date.now()-clock)/1000); setLCD(Math.floor(s/3600)+':'+String(Math.floor(s/60)%60).padStart(2,'0')+':'+String(s%60).padStart(2,'0')); setTimeout(tickLCD,1000); }
+  function ejectTape(){
+    clearTimeout(loadT); if(frame){ frame.remove(); frame=null; }
+    if(current){ current.classList.remove('out'); current.focus(); current=null; }
+    mode='static'; screen.classList.remove('playing','blue'); cv.hidden=false; msg.textContent='insert a tape'; setLCD('--:--'); eject.disabled=true; start();
+  }
+  document.querySelectorAll('.tape').forEach(t=>t.addEventListener('click',()=>play(t)));
+  eject.addEventListener('click', ejectTape);
+  start();
+})();
+
+/* light box: pull prints out of the tin one at a time */
+(function(){
+  const desk=document.getElementById('lb-desk'), pull=document.getElementById('lb-pull'), reset=document.getElementById('lb-reset'), count=document.getElementById('lb-count');
+  const photos=Array.from({length:11},(_,i)=>'images/lightbox/photo-'+String(i+1).padStart(2,'0')+'.jpg');
+  let bag=[], z=1, onDesk=[];
+  const shuffle=a=>{ for(let i=a.length-1;i>0;i--){ const j=Math.random()*(i+1)|0; [a[i],a[j]]=[a[j],a[i]]; } return a; };
+  function refill(){ bag=shuffle(photos.slice()); }
+  function update(){ count.textContent = bag.length ? bag.length+' left in the tin' : 'the tin is empty'; pull.textContent = bag.length ? 'pull a photo' : 'start over'; }
+  function drop(src, instant){
+    const el=document.createElement('figure'); el.className='print-lb'; el.style.margin='0';
+    const im=document.createElement('img'); im.src=src; im.alt='A photograph by Alijah'; im.loading='lazy';
+    const st=document.createElement('span'); st.className='stamp-date'; st.textContent=String(photos.indexOf(src)+1).padStart(2,'0')+' / '+photos.length;
+    el.append(im, st);
+    const W=desk.clientWidth, H=desk.clientHeight;
+    const pw=Math.min(W*0.56, 420), x=Math.random()*Math.max(0,W-pw-20)+10, y=10+Math.random()*Math.max(10,H-pw*0.72-40);
+    const r=(Math.random()*16-8).toFixed(1);
+    el.style.left=x+'px'; el.style.top=y+'px'; el.style.zIndex=++z;
+    el.style.transform = instant ? `rotate(${r}deg)` : `translate(${-x-40}px, ${H}px) rotate(${r*3}deg)`;
+    desk.appendChild(el); onDesk.push(el);
+    if(!instant) requestAnimationFrame(()=>requestAnimationFrame(()=>{ el.style.transform=`rotate(${r}deg)`; }));
+    while(onDesk.length>6){ const old=onDesk.shift(); old.style.opacity='0'; setTimeout(()=>old.remove(),500); }
+  }
+  pull.addEventListener('click',()=>{ if(!bag.length){ clearDesk(); refill(); } drop(bag.pop(), false); update(); });
+  function clearDesk(){ onDesk.forEach(e=>e.remove()); onDesk=[]; }
+  reset.addEventListener('click',()=>{ clearDesk(); refill(); update(); });
+  refill();
+  // a few are already out when you arrive
+  requestAnimationFrame(()=>{ for(let i=0;i<3;i++) drop(bag.pop(), true); update(); });
+})();
+</script>
+
+<script>
+/* radio: tune between static and Alijah's songs. each station is always "on air". */
+(function(){
+  // add more stations here as songs come in: {f: frequency, title, src}
+  const STATIONS=[
+    {f:89.1,  title:'a tribute to tokyo', src:'audio/a-tribute-to-tokyo.mp3'},
+    {f:91.5,  title:'more than words',    src:'audio/more-than-words.mp3'},
+    {f:93.9,  title:'lament',             src:'audio/lament.mp3'},
+    {f:96.3,  title:'ryuichi',            src:'audio/ryuichi.mp3'},
+    {f:98.7,  title:'embrace (interlude)',src:'audio/embrace-interlude.mp3'},
+    {f:101.1, title:'same sky',           src:'audio/same-sky.mp3'},
+    {f:103.5, title:'nostalgia',          src:'audio/nostalgia.mp3'},
+    {f:105.9, title:'until next time',    src:'audio/until-next-time.mp3'}
+  ];
+  const radio=document.getElementById('radio'), tune=document.getElementById('radio-tune'), power=document.getElementById('radio-power'),
+        readout=document.getElementById('radio-readout'), knob=document.getElementById('radio-knob'), scale=document.getElementById('radio-scale');
+  const pct=f=>((f-88)/20*100)+'%';
+  for(let f=88;f<=108;f+=1){ const t=document.createElement('span'); t.className='tick'; t.style.left=pct(f); t.style.height=(f%2===0?18:10)+'px'; scale.appendChild(t);
+    if(f%4===0){ const n=document.createElement('span'); n.className='num'; n.style.left=pct(f); n.textContent=f; scale.appendChild(n); } }
+  STATIONS.forEach((s,i)=>{ const l=document.createElement('span'); l.className='st'+(i%2?' low':'')+(i===0?' edge-l':'')+(i===STATIONS.length-1?' edge-r':''); l.style.left=pct(s.f); l.textContent=s.title; scale.appendChild(l); });
+
+  let ac=null, noiseG=null, on=false;
+  function build(){
+    const AC=window.AudioContext||window.webkitAudioContext; ac=new AC();
+    const len=ac.sampleRate*2, b=ac.createBuffer(1,len,ac.sampleRate), d=b.getChannelData(0); for(let i=0;i<len;i++) d[i]=Math.random()*2-1;
+    const n=ac.createBufferSource(); n.buffer=b; n.loop=true;
+    const bp=ac.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=2200; bp.Q.value=0.4;
+    noiseG=ac.createGain(); noiseG.gain.value=0; n.connect(bp); bp.connect(noiseG); noiseG.connect(ac.destination); n.start();
+    STATIONS.forEach(s=>{
+      s.el=new Audio(s.src); s.el.loop=true; s.el.preload='none';
+      const src=ac.createMediaElementSource(s.el);
+      const hp=ac.createBiquadFilter(); hp.type='highpass'; hp.frequency.value=140;
+      const lp=ac.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=7000;
+      s.g=ac.createGain(); s.g.gain.value=0; src.connect(hp); hp.connect(lp); lp.connect(s.g); s.g.connect(ac.destination);
+    });
+  }
+  function update(){
+    const f=+tune.value;
+    knob.style.transform='rotate('+((f-88)/20*300-150)+'deg)';
+    let best=null, sig=0;
+    STATIONS.forEach(s=>{ const k=Math.max(0,1-Math.abs(f-s.f)/0.6); if(k>sig){ sig=k; best=s; } });
+    readout.textContent='FM '+f.toFixed(1)+' · '+(sig>0.55&&best?best.title:'static');
+    if(!on||!ac) return;
+    const t=ac.currentTime;
+    noiseG.gain.setTargetAtTime(0.16*(1-sig)+0.01, t, 0.05);
+    STATIONS.forEach(s=>{
+      const k=Math.max(0,1-Math.abs(f-s.f)/0.6);
+      s.g.gain.setTargetAtTime(k*k, t, 0.05);
+      if(k>0 && s.el.paused){
+        const go=()=>{ if(isFinite(s.el.duration)) s.el.currentTime=(Date.now()/1000)%s.el.duration; s.el.play().catch(()=>{}); };
+        if(s.el.readyState>=1) go(); else { s.el.preload='auto'; s.el.addEventListener('loadedmetadata',go,{once:true}); s.el.load(); }
+      } else if(k===0 && !s.el.paused){ s.el.pause(); }
+    });
+  }
+  power.addEventListener('click',async()=>{
+    if(!ac) build();
+    on=!on; radio.classList.toggle('on',on); power.setAttribute('aria-pressed',on);
+    if(on){ try{ await ac.resume(); }catch(e){} update(); }
+    else { noiseG.gain.setTargetAtTime(0,ac.currentTime,0.03); STATIONS.forEach(s=>{ s.g.gain.setTargetAtTime(0,ac.currentTime,0.03); s.el.pause(); }); }
+  });
+  tune.addEventListener('input',update);
+  // drag the knob too
+  let drag=null;
+  knob.style.pointerEvents='auto'; knob.style.cursor='grab'; knob.style.touchAction='none';
+  knob.addEventListener('pointerdown',e=>{ drag={x:e.clientX,v:+tune.value}; knob.setPointerCapture(e.pointerId); });
+  knob.addEventListener('pointermove',e=>{ if(!drag) return; tune.value=Math.min(108,Math.max(88,drag.v+(e.clientX-drag.x)*0.05)).toFixed(1); update(); });
+  knob.addEventListener('pointerup',()=>{ drag=null; });
+  update();
+})();
+
+/* flipbook: the first pages of Yumebito */
+(function(){
+  const P=n=>'images/yumebito/page-'+String(n).padStart(2,'0')+'.jpg';
+  // [front, back] for each sheet, in print order; null is a blank page
+  const leaves=[[P(1),null],[P(3),P(4)],[P(5),P(6)],[P(7),P(8)],[P(9),P(10)],[P(11),P(12)],[P(13),P(14)],[P(15),P(16)],[P(17),P(18)],[P(19),P(20)],[null,P(2)]];
+  const book=document.getElementById('book-el'), stage=document.getElementById('book-stage'),
+        prev=document.getElementById('book-prev'), next=document.getElementById('book-next'), count=document.getElementById('book-count');
+  const N=leaves.length; let k=0;
+  const els=leaves.map((pair,i)=>{
+    const leaf=document.createElement('div'); leaf.className='leaf';
+    pair.forEach((src,j)=>{ const side=document.createElement('div'); side.className='side '+(j?'back':'front')+(src?'':' blank');
+      if(src){ const im=document.createElement('img'); im.src=src; im.loading='lazy'; im.alt=i===0&&j===0?'Yumebito cover':'Yumebito, sample page'; side.appendChild(im); }
+      leaf.appendChild(side); });
+    leaf.addEventListener('click',e=>{ e.stopPropagation(); if(leaf.classList.contains('flipped')) go(-1); else go(1); });
+    book.appendChild(leaf); return leaf;
+  });
+  // phones: a flat page-by-page reader instead of spreads
+  const flat=leaves.flat().filter(Boolean); let fi=0;
+  const solo=document.createElement('img'); solo.className='solo'; solo.alt='Yumebito, sample page'; book.appendChild(solo);
+  const single=()=>stage.clientWidth<560;
+  function render(){
+    const s=single(); book.classList.toggle('single',s);
+    if(s){
+      solo.src=flat[fi]; solo.alt= fi===0?'Yumebito cover':'Yumebito, sample page '+fi;
+      prev.disabled=fi===0; next.disabled=fi===flat.length-1;
+      count.textContent= fi===0?'cover':'page '+fi+' of '+(flat.length-1);
+      return;
+    }
+    els.forEach((el,i)=>{ const f=i<k; el.classList.toggle('flipped',f); el.style.zIndex= f ? i+1 : N-i+N; });
+    book.classList.toggle('closed', k===0); book.classList.toggle('ended', k===N);
+    prev.disabled=k===0; next.disabled=k===N;
+    count.textContent = k===0 ? 'cover' : k===N ? 'back cover' : 'spread '+k+' of '+(N-1);
+  }
+  function go(d){ if(single()) fi=Math.max(0,Math.min(flat.length-1,fi+d)); else k=Math.max(0,Math.min(N,k+d)); render(); }
+  prev.addEventListener('click',()=>go(-1)); next.addEventListener('click',()=>go(1));
+  stage.addEventListener('keydown',e=>{ if(e.key==='ArrowRight'){ go(1); e.preventDefault(); } if(e.key==='ArrowLeft'){ go(-1); e.preventDefault(); } });
+  let sx=null; stage.addEventListener('touchstart',e=>{ sx=e.touches[0].clientX; },{passive:true});
+  stage.addEventListener('touchend',e=>{ if(sx==null) return; const dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40) go(dx<0?1:-1); sx=null; });
+  addEventListener('resize',render);
+  render();
+})();
+</script>
+</body>
+</html>
