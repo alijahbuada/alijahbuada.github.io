@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Issue 02: What Makes a Film Perfect</title>
+<meta name="description" content="a vocabulary of what makes a film perfect: twenty invented tropes by alijah jacob buada. goneadrift, issue no. 02.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="what makes a film perfect · goneadrift issue 02">
+<meta property="og:description" content="twenty invented tropes, anchored on Call Me Chihiro.">
+<meta property="og:url" content="https://alijahbuada.github.io/issues/02/">
+<meta property="og:image" content="https://alijahbuada.github.io/images/og-headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#efe7d6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%23efe7d6%27/%3E%3Ctext x=%2732%27 y=%2746%27 font-size=%2738%27 text-anchor=%27middle%27 fill=%27%23d6436a%27 font-family=%27serif%27%3E%E4%BA%8C%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Nanum+Pen+Script&family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;700&display=swap">
+<style>
+/* Layout: issue 02 prints on paper instead of the desk. A dictionary set in black ink with one riso pink, six "reels" of entries, and each entry doing what it describes. */
+:root{
+  --paper:#efe7d6; --paper-2:#e6dcc6; --ink:#1d1714; --ink-dim:#6b5d50; --rule:#c9bba3;
+  --riso:#d6436a; --blue:#2f5d8a; --tape:#d9c8a2;
+  --f-head:"Zen Old Mincho","Shippori Mincho B1","Hiragino Mincho ProN",Georgia,serif;
+  --f-disp:"Shippori Mincho B1","Hiragino Mincho ProN",Georgia,serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Helvetica Neue",Arial,sans-serif;
+  --f-dot:"DotGothic16","Courier New",ui-monospace,monospace;
+  --f-hand:"Nanum Pen Script","Bradley Hand",cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.75;padding-inline:16px;padding-block:22px 60px;
+  background-image:radial-gradient(rgba(29,23,20,.045) 1px,transparent 1.2px);background-size:4px 4px}
+a{color:inherit}
+:focus-visible{outline:2px dashed var(--riso);outline-offset:3px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:16px;top:8px;background:var(--ink);color:var(--paper);padding:4px 10px;z-index:10}
+.page{max-width:1120px;margin-inline:auto;display:grid;gap:64px}
+.label,.kicker,.dot{font-family:var(--f-dot);font-size:13px;letter-spacing:.08em;color:var(--ink-dim);text-transform:lowercase}
+
+/* masthead + issue switcher */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:12px;position:relative;z-index:5}
+.home{font-family:var(--f-disp);font-weight:800;font-size:26px;text-decoration:none}
+.home b{color:var(--riso)}
+.issues-menu{position:relative}
+.issues-menu summary{list-style:none;cursor:pointer;font-family:var(--f-dot);font-size:14px;border:1.5px solid var(--ink);border-radius:999px;padding:4px 14px;background:var(--paper)}
+.issues-menu summary::-webkit-details-marker{display:none}
+.issues-menu[open] summary{background:var(--ink);color:var(--paper)}
+.issues-menu nav{position:absolute;right:0;top:calc(100% + 8px);background:var(--paper);border:1.5px solid var(--ink);box-shadow:6px 6px 0 var(--ink);min-width:280px;display:grid}
+.issues-menu nav a{display:grid;grid-template-columns:40px 1fr;gap:2px 10px;padding:10px 14px;text-decoration:none;border-bottom:1px dashed var(--rule)}
+.issues-menu nav a:last-child{border-bottom:0}
+.issues-menu nav a b{font-family:var(--f-disp);font-size:26px;line-height:1;grid-row:span 2;color:var(--riso)}
+.issues-menu nav a span{font-family:var(--f-dot);font-size:11px;color:var(--ink-dim)}
+.issues-menu nav a:hover{background:var(--paper-2)}
+
+/* cover */
+.cover{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:44px;align-items:center}
+.cover h1{margin:10px 0 6px;font-family:var(--f-head);font-weight:700;font-size:clamp(38px,6vw,76px);line-height:1.05;letter-spacing:-.01em;text-wrap:balance}
+.cover h1 em{font-style:normal;color:var(--riso);text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px}
+.by{margin:0 0 18px;font-family:var(--f-hand);font-size:28px;color:var(--blue)}
+.lede{margin:0;max-width:56ch;font-size:18px}
+.cover-still{margin:0;background:#fffaf0;padding:12px 12px 14px;box-shadow:0 18px 36px rgba(29,23,20,.25);transform:rotate(1.2deg);position:relative}
+.cover-still::before{content:"";position:absolute;top:-10px;left:50%;width:90px;height:22px;transform:translateX(-50%) rotate(-3deg);background:var(--tape);opacity:.75}
+.cover-still img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--paper-2)}
+.cover-still.noimg img{display:none}
+.cover-still figcaption{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:10px;font-family:var(--f-disp);font-size:18px}
+.ticket{font-family:var(--f-dot);font-size:11px;letter-spacing:.1em;color:var(--paper);background:var(--riso);padding:2px 10px;border-radius:2px;position:relative}
+@media (max-width:800px){.cover{grid-template-columns:1fr}}
+
+.pull{margin:0;max-width:24ch;justify-self:center;text-align:center;font-family:var(--f-head);font-size:clamp(28px,4.4vw,48px);line-height:1.3;text-wrap:balance}
+.pull::before,.pull::after{color:var(--riso)}
+
+/* program */
+.program{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:44px;align-items:start;border-top:2px solid var(--ink);padding-top:22px}
+.lineup{list-style:none;margin:10px 0 0;padding:0;display:grid}
+.lineup li{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:7px 0;border-bottom:1px dashed var(--rule);font-family:var(--f-disp);font-size:17px}
+.lineup .ln{font-family:var(--f-dot);font-size:12px;color:var(--ink-dim);padding-top:3px;font-variant-numeric:tabular-nums}
+.lineup li.anchor{font-weight:800;color:var(--riso)}
+.program-text p{margin:0 0 16px;max-width:62ch}
+@media (max-width:800px){.program{grid-template-columns:1fr}}
+
+/* lexicon */
+.lex-wrap{display:grid;grid-template-columns:240px minmax(0,1fr);gap:44px;align-items:start}
+.toc{position:sticky;top:20px;max-height:calc(100vh - 40px);overflow:auto;font-size:13px;padding-right:6px}
+.toc ol{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px}
+.toc ol ol{gap:2px;margin:4px 0 0 18px}
+.toc > ol > li > a{font-family:var(--f-disp);font-weight:700;font-size:15px;text-decoration:none;display:flex;gap:8px}
+.toc > ol > li > a span{color:var(--riso);font-family:var(--f-dot)}
+.toc ol ol a{text-decoration:none;color:var(--ink-dim);line-height:1.35;display:block}
+.toc a:hover{color:var(--riso)}
+@media (max-width:900px){.lex-wrap{grid-template-columns:1fr}.toc{display:none}}
+
+.lexicon{display:grid;gap:80px}
+.cat{display:grid;gap:56px}
+.cat-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:10px}
+.cat-head h2{margin:0;font-family:var(--f-head);font-weight:700;font-size:clamp(28px,4vw,44px);line-height:1.1}
+.cat-no{font-family:var(--f-dot);font-size:13px;color:var(--paper);background:var(--ink);padding:1px 10px;border-radius:2px}
+.cat-jp{margin-left:auto;font-family:var(--f-disp);color:var(--riso);font-size:22px;letter-spacing:.2em}
+
+.entry{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;scroll-margin-top:20px}
+.entry.has-media{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);column-gap:36px}
+.entry.has-media .plate{grid-column:2;grid-row:1/span 4;align-self:start}
+.e-meta{display:flex;gap:12px;font-family:var(--f-dot);font-size:12px;color:var(--ink-dim)}
+.e-no{color:var(--riso)}
+.hw{margin:0;font-family:var(--f-head);font-weight:700;font-size:clamp(26px,3.4vw,40px);line-height:1.15;text-wrap:balance}
+.gloss{font-family:var(--f-disp);font-style:italic;color:var(--blue);font-size:18px}
+.pos{font-family:var(--f-dot);font-style:normal;font-size:12px;color:var(--ink-dim);margin-left:6px}
+.def{margin-top:10px}
+.def p{margin:0 0 12px;max-width:60ch}
+.plate{margin:0;background:#fffaf0;padding:8px 8px 10px;box-shadow:0 12px 24px rgba(29,23,20,.2);transform:rotate(-.8deg)}
+.plate img{display:block;width:100%;height:auto}
+.plate figcaption{font-family:var(--f-dot);font-size:11px;color:var(--ink-dim);padding-top:6px}
+@media (max-width:700px){.entry.has-media{grid-template-columns:1fr}.entry.has-media .plate{grid-column:auto;grid-row:auto;max-width:420px;margin-top:12px}}
+
+/* ——— each entry performs itself ——— */
+/* 01 cross-pollination: we join mid-thought */
+.fx-midthought .pre{color:var(--ink-dim);font-style:italic}
+/* 02 forced inference: the connective sentence is withheld */
+.hidden-line{filter:blur(5px);transition:filter .5s;cursor:help;background:linear-gradient(transparent 60%,rgba(214,67,106,.18) 60%)}
+.hidden-line:hover,.hidden-line:focus,.hidden-line.shown{filter:none}
+/* 03 jazz between moments */
+.jazz{all:unset;cursor:pointer;display:inline-flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:6px;font-family:var(--f-disp);font-size:17px;border:1.5px solid var(--ink);border-radius:999px;padding:6px 16px}
+.jazz:hover,.jazz.on{background:var(--ink);color:var(--paper)}
+.jazz.on .dot{color:var(--paper-2)}
+.jazz:focus-visible{outline:2px dashed var(--riso);outline-offset:3px}
+.jz-ico{font-family:var(--f-dot);font-size:13px}
+/* 04 anti-nostalgia: the past fades out of the picture */
+.fx-release .plate img{filter:sepia(.9) contrast(.85) brightness(1.05);transition:filter 3s ease 0.6s}
+.fx-release.in-view .plate img{filter:none}
+/* 05 code switcher: the headword changes register */
+.switcher{display:inline-block;transition:opacity .2s}
+.switcher.r1{font-family:var(--f-dot);font-weight:400;letter-spacing:.02em}
+.switcher.r2{font-family:var(--f-hand);font-weight:400;font-size:1.25em;color:var(--blue)}
+.switcher.r3{font-family:var(--f-body);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.8em}
+/* 06 alien speak: right words, wrong register */
+.fx-alien .def p{font-family:var(--f-dot);font-size:16px;line-height:1.9;background:var(--ink);color:#e9f0ff;padding:12px 14px;transform:rotate(-1.2deg);display:inline-block;max-width:52ch}
+/* 07 beautiful ugly: a compromised palette */
+.fx-palette .plate{position:relative;overflow:hidden}
+.fx-palette .plate img{filter:saturate(1.6) hue-rotate(-28deg) contrast(1.15);transition:filter 1.2s}
+.fx-palette .plate:hover img{filter:none}
+.fx-palette .plate::after{content:"";position:absolute;inset:8px 8px 10px;background:linear-gradient(135deg,rgba(214,67,106,.35),rgba(47,93,138,.35));mix-blend-mode:color;pointer-events:none;transition:opacity 1.2s}
+.fx-palette .plate:hover::after{opacity:0}
+/* 09 sexondary: set as a secondary, quieter entry */
+.fx-secondary{margin-left:clamp(0px,8vw,120px);border-left:2px solid var(--rule);padding-left:18px}
+.fx-secondary .hw{font-size:22px;color:var(--ink-dim)}
+.fx-secondary .def p{font-size:15px;color:var(--ink-dim)}
+/* 10 wispy bangs: the drawing leads */
+.fx-bangs .plate{transform:rotate(1.5deg)}
+/* 11 random item fixation: the object is held, the meaning arrives late */
+.fx-object.has-media{grid-template-columns:1fr}
+.fx-object .plate{grid-column:1!important;grid-row:1!important;max-width:760px;transform:none;margin-bottom:22px}
+.fx-object .def{opacity:0;transition:opacity 1.2s ease 2.2s}
+.fx-object.in-view .def{opacity:1}
+/* 12 breathless transitions: no announcement */
+.fx-breathless{margin-top:-30px}
+.fx-breathless .e-meta{display:none}
+.fx-breathless .hw{font-size:20px;font-family:var(--f-disp);display:inline}
+.fx-breathless .gloss{display:inline;margin-left:8px;font-size:15px}
+/* 13 the held shot: the camera refuses to cut */
+.fx-held{min-height:150vh;align-items:start}
+.fx-held .plate{position:sticky;top:12vh;transform:none;overflow:hidden}
+.fx-held .plate img{transform:scale(1);transition:transform 14s linear}
+.fx-held.in-view .plate img{transform:scale(1.09)}
+@media (max-width:700px){.fx-held{min-height:0}.fx-held .plate{position:static}}
+/* 14 toppling inconveniences: a visible seam */
+.exhale{margin:26px 0 30px;font-family:var(--f-dot);font-size:12px;color:var(--ink-dim);letter-spacing:.4em;border-top:1px dashed var(--rule);border-bottom:1px dashed var(--rule);padding:22px 0;text-align:center;max-width:60ch}
+/* 15 child-adult inversion */
+.porous{display:inline;border-bottom:2px dotted var(--blue)}
+.sealed{display:inline;background:var(--ink);color:var(--paper);padding:0 4px}
+/* 16 the seeing problem: each half sees what the other can't */
+.see{position:relative;max-width:60ch}
+.see p{margin:0}
+.see-a{-webkit-mask-image:linear-gradient(90deg,#000 50%,rgba(0,0,0,.25) 50%);mask-image:linear-gradient(90deg,#000 50%,rgba(0,0,0,.25) 50%);transition:.5s}
+.see-b{position:absolute;inset:0;filter:blur(3px);-webkit-mask-image:linear-gradient(90deg,transparent 50%,#000 50%);mask-image:linear-gradient(90deg,transparent 50%,#000 50%);pointer-events:none;transition:.5s}
+.see:hover .see-a,.see.flip .see-a{-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.25) 50%,#000 50%);mask-image:linear-gradient(90deg,rgba(0,0,0,.25) 50%,#000 50%)}
+.see:hover .see-b,.see.flip .see-b{-webkit-mask-image:linear-gradient(90deg,#000 50%,transparent 50%);mask-image:linear-gradient(90deg,#000 50%,transparent 50%)}
+.see-hint{font-family:var(--f-dot);font-size:12px;color:var(--ink-dim)}
+/* 18 drifters: the words wash up next to each other */
+.drift-words span{display:inline-block;transition:transform 2.4s cubic-bezier(.2,.8,.2,1),opacity 2.4s;transition-delay:calc(var(--i) * 40ms)}
+.fx-drift:not(.in-view) .drift-words span{opacity:.15;transform:translate(calc((var(--i) * 37 % 60 - 30) * 1px),calc((var(--i) * 53 % 40 - 20) * 1px))}
+/* 20 confidante: witnesses from the margin */
+.fx-witness{max-width:520px;justify-self:end;border:1.5px solid var(--ink);padding:18px 20px;box-shadow:6px 6px 0 var(--riso);background:#fffaf0}
+.fx-witness .hw{font-size:24px}
+
+/* not a checklist */
+.check{display:grid;gap:18px}
+.check-intro{margin:0;max-width:62ch}
+.check-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+#film-name{font:inherit;font-family:var(--f-disp);font-size:18px;background:#fffaf0;border:1.5px solid var(--ink);padding:6px 12px;min-width:0;flex:1 1 220px;max-width:360px;border-radius:2px}
+.pill{all:unset;cursor:pointer;font-family:var(--f-dot);font-size:13px;border:1.5px solid var(--ink);border-radius:999px;padding:4px 12px}
+.pill:hover{background:var(--ink);color:var(--paper)}
+.pill:focus-visible{outline:2px dashed var(--riso);outline-offset:2px}
+.score-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.score{font-family:var(--f-head);line-height:1}
+.score b{font-size:72px;color:var(--riso);font-variant-numeric:tabular-nums}
+.score span{font-size:28px;color:var(--ink-dim)}
+.verdict{margin:0;font-family:var(--f-hand);font-size:30px;color:var(--blue);line-height:1.2}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.grid button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:30px 1fr;gap:6px;width:100%;height:100%;padding:10px 12px;border:1.5px solid var(--rule);background:#fffaf0;font-family:var(--f-disp);font-size:15px;line-height:1.3;transition:background .2s,border-color .2s}
+.grid button span{font-family:var(--f-dot);font-size:12px;color:var(--ink-dim)}
+.grid button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.grid button[aria-pressed="true"] span{color:var(--riso)}
+.grid button:focus-visible{outline:2px dashed var(--riso);outline-offset:2px}
+
+.closing{display:grid;gap:12px;justify-items:center;text-align:center;border-top:2px solid var(--ink);padding-top:36px}
+.closing p{margin:0;max-width:40ch;font-family:var(--f-head);font-size:clamp(22px,3vw,30px);line-height:1.5;text-wrap:balance}
+.sig{font-family:var(--f-hand);font-size:34px;color:var(--riso)}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px dashed var(--rule);padding-top:16px;font-family:var(--f-dot);font-size:12px;color:var(--ink-dim)}
+.foot a{text-decoration:none;color:var(--riso)}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .fx-object .def{opacity:1}
+  .fx-drift .drift-words span{opacity:1!important;transform:none!important}
+  .fx-release .plate img{filter:none}
+}
+/* paired plates + closing still */
+.plates{display:grid;gap:18px}
+.plates .plate{grid-column:auto!important;grid-row:auto!important;max-width:none}
+.entry.has-media .plates{grid-column:2;grid-row:1/span 4;align-self:start}
+.plates .plate:nth-child(2){width:62%;justify-self:end;transform:rotate(2.2deg);margin-top:-30px}
+.plate.mine figcaption{font-family:var(--f-pen,'Nanum Pen Script',cursive);font-size:16px}
+.closing-still{width:min(520px,100%);transform:rotate(-1deg);margin-bottom:14px}
+@media (max-width:700px){.entry.has-media .plates{grid-column:auto;grid-row:auto;max-width:420px;margin-top:12px}.plates .plate:nth-child(2){margin-top:-16px}}
+
+</style>
+</head>
+<body>
+
+<a class="skip" href="#lexicon">skip to the vocabulary</a>
+<div class="page">
+  <header class="mast">
+    <a class="home" href="../../index.html">gone<b>adrift</b></a>
+    <details class="issues-menu">
+      <summary>issue no. 02 ▾</summary>
+      <nav aria-label="Issues">
+        <a href="../../index.html"><b>01</b> goneadrift <span>autumn 2026</span></a>
+        <a href="#" aria-current="page"><b>02</b> what makes a film perfect <span>you are here</span></a>
+      </nav>
+    </details>
+  </header>
+
+  <section class="cover">
+    <div class="cover-text">
+      <span class="kicker">issue no. 02 · a special issue · 特集</span>
+      <h1>A Vocabulary of What Makes a Film <em>Perfect</em></h1>
+      <p class="by">by Alijah Jacob Buada</p>
+      <p class="lede">These are not borrowed terms. I invented these tropes after watching the following films and trying to name what kept happening, the specific things that made them feel true rather than constructed, felt rather than made. For sake of ease when I use the term film, I am using it as a blanket term for all listed media. I include anime, manga, limited series, and films.</p>
+    </div>
+    <figure class="cover-still">
+      <img src="../../images/chihiro/still-03.jpg" alt="Two girls standing in the water at sunset, from Call Me Chihiro" width="650" height="390">
+      <figcaption><span class="ticket">ADMIT ONE · anchor film</span><b>Call Me Chihiro</b> (2023)</figcaption>
+    </figure>
+  </section>
+
+  <blockquote class="pull">A “perfect” film just keeps being right, in ways you cannot fully explain until you try.</blockquote>
+
+  <section class="program">
+    <div class="program-list">
+      <span class="label">the program · comparable films</span>
+      <ol class="lineup"><li class=anchor><span class="ln">00</span>Call Me Chihiro (2023)</li><li><span class="ln">01</span>Open House (1998)</li><li><span class="ln">02</span>Nobody Knows (2004)</li><li><span class="ln">03</span>Monogatari (2005–present)</li><li><span class="ln">04</span>Omoide Emanon (2006–2017)</li><li><span class="ln">05</span>Burning (2018)</li><li><span class="ln">06</span>Yanagawa (2021)</li><li><span class="ln">07</span>More Than Words (2022)</li><li><span class="ln">08</span>Jamojaya (2023)</li><li><span class="ln">09</span>Monster (2023)</li><li><span class="ln">10</span>Perfect Days (2023)</li><li><span class="ln">11</span>Renoir (2025)</li><li><span class="ln">12</span>Sounds of Winter (2026)</li></ol>
+    </div>
+    <div class="program-text">
+      <p>It would seem, looking at the films listed here, that most of them belong to the last decade. This is not ignorance of film history. It is not recency bias. It is something closer to the opposite: a willingness to believe that modern film has more accurately captured the human experience now than at any other point in the medium's history, precisely because it has had longer to try.</p>
+      <p>We are working from a vast and documented database of human experience within film itself. Every film made today is made in conversation with every film that came before it. The medium has simply had more time to get it right. These films feel true to me not because they are new, but because they are the most recent beneficiaries of everything that came before them.</p>
+    </div>
+  </section>
+
+  <div class="lex-wrap" id="lexicon">
+    <aside class="toc" aria-label="Contents"><span class="label">the twenty · 二十</span><ol><li><a href="#c1"><span>1</span>dialogue and inference</a><ol><li><a href="#t01">Cross-Pollination of Mumbled Nothingness</a></li><li><a href="#t02">Forced Inference</a></li><li><a href="#t03">Jazz as Silence Killer</a></li></ol></li><li><a href="#c2"><span>2</span>character interiority and code</a><ol><li><a href="#t04">Anti-Nostalgia</a></li><li><a href="#t05">Master Code Switcher</a></li><li><a href="#t06">Alien-Like / Alien Speak</a></li><li><a href="#t07">Beautiful Ugly</a></li></ol></li><li><a href="#c3"><span>3</span>the body and gesture</a><ol><li><a href="#t08">Unorthodox Gesticulation</a></li><li><a href="#t09">Sexondary</a></li><li><a href="#t10">Wispy Bangs Make for Wispy Thoughts</a></li></ol></li><li><a href="#c4"><span>4</span>visual language</a><ol><li><a href="#t11">Random Item Fixation</a></li><li><a href="#t12">Breathless Transitions</a></li><li><a href="#t13">The Held Shot</a></li><li><a href="#t14">Toppling Inconveniences</a></li></ol></li><li><a href="#c5"><span>5</span>the seeing problem</a><ol><li><a href="#t15">Mature Thoughtful Children Juxtaposing Cold Adults</a></li><li><a href="#t16">Someone Blind Who Cannot See / Someone Who Sees But Is Blinded</a></li></ol></li><li><a href="#c6"><span>6</span>ensemble and relationship</a><ol><li><a href="#t17">The Parentless Make Great Parents</a></li><li><a href="#t18">Drifters Find Each Other</a></li><li><a href="#t19">Band of Empties Finding Solace</a></li><li><a href="#t20">Confidante That Knows Their Place</a></li></ol></li></ol></aside>
+    <main class="lexicon">
+    <section class="cat" id="c1">
+      <header class="cat-head"><span class="cat-no">reel 1</span><h2>dialogue and inference</h2><span class="cat-jp">対話</span></header>
+      <article class="entry fx-midthought has-media" id="t01" data-no="1">
+        <div class="e-meta"><span class="e-no">no. 01</span><span class="e-cat">dialogue and inference</span></div>
+        <h3 class="hw">Cross-Pollination of Mumbled Nothingness</h3>
+        <div class="gloss">(Cross-Pollination) <span class="pos">n.</span></div>
+        <div class="def"><p><span class="pre" aria-hidden="true">…so anyway, </span>Dialogue that arrives mid-thought. Characters speak as though the conversation began before the scene did, ideas accumulating across registers, articulate in feeling if not always in structure. The film trusts the viewer to feel the through-line before they see it. Somewhat articulately well spoken and earnest.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-15.jpg" alt="Chihiro at the bento counter making a peace sign, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-infer has-media" id="t02" data-no="2">
+        <div class="e-meta"><span class="e-no">no. 02</span><span class="e-cat">dialogue and inference</span></div>
+        <h3 class="hw">Forced Inference</h3>
+        <div class="gloss">(Assumed Understanding) <span class="pos">n.</span></div>
+        <div class="def"><p>The film withholds the connective tissue between scenes, emotions, and revelations, assuming the viewer will supply it. <span class="hidden-line" tabindex="0" aria-label="Hidden sentence. Focus or hover to read it.">When they do, the feeling is specific: being trusted.</span> The scratching of the ego in the right place. The reward for staying present.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-05.jpg" alt="A girl alone in a dim room by the curtains, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-jazz" id="t03" data-no="3">
+        <div class="e-meta"><span class="e-no">no. 03</span><span class="e-cat">dialogue and inference</span></div>
+        <h3 class="hw">Jazz as Silence Killer</h3>
+        <div class="gloss">(Not a Lead Enforcer) <span class="pos">n.</span></div>
+        <div class="def"><p>Music that appears between moments rather than within them. It fills transitions, not scenes. It does not lead the emotion. It kills the silence after the emotion has already happened. The score knows its place.</p><button type="button" class="jazz" id="jazz" data-src="../../audio/nostalgia.mp3"><span class="jz-ico">▶</span> let the jazz kill the silence <span class="dot">· a few bars of “nostalgia” by alijah jacob</span></button></div>
+        
+      </article>
+    </section>
+    <section class="cat" id="c2">
+      <header class="cat-head"><span class="cat-no">reel 2</span><h2>character interiority and code</h2><span class="cat-jp">内面</span></header>
+      <article class="entry fx-release" id="t04" data-no="4">
+        <div class="e-meta"><span class="e-no">no. 04</span><span class="e-cat">character interiority and code</span></div>
+        <h3 class="hw">Anti-Nostalgia</h3>
+        <div class="gloss">(The Past is Someone Else) <span class="pos">n.</span></div>
+        <div class="def"><p>A relationship to the past that refuses sentimentality. The character&#x27;s history is acknowledged as fact and then released. Not repression, active non-attachment. The past is real. It belongs to someone else now. I am just me.</p></div>
+        
+      </article>
+      <article class="entry fx-switch" id="t05" data-no="5">
+        <div class="e-meta"><span class="e-no">no. 05</span><span class="e-cat">character interiority and code</span></div>
+        <h3 class="hw"><span class="switcher" data-text="Master Code Switcher">Master Code Switcher</span></h3>
+        <div class="gloss">(Borderline MPD) <span class="pos">n.</span></div>
+        <div class="def"><p>A protagonist who speaks an entirely different language with each person they encounter, not performing, adapting. The register shifts completely. Every version is real. The character is all of them simultaneously and none of them permanently.</p></div>
+        
+      </article>
+      <article class="entry fx-alien has-media" id="t06" data-no="6">
+        <div class="e-meta"><span class="e-no">no. 06</span><span class="e-cat">character interiority and code</span></div>
+        <h3 class="hw">Alien-Like / Alien Speak</h3>
+        <div class="gloss">(The Sore Thumb) <span class="pos">n.</span></div>
+        <div class="def"><p>A character who communicates from a frequency others cannot quite receive, not because they are strange but because they are accurate. They say true things in the wrong register, at the wrong moment, with the wrong affect. Both the alien-like and the alien speak make you stick out like a sore thumb.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-09.jpg" alt="A girl with a black bob beside a man in glasses, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-palette has-media" id="t07" data-no="7">
+        <div class="e-meta"><span class="e-no">no. 07</span><span class="e-cat">character interiority and code</span></div>
+        <h3 class="hw">Beautiful Ugly</h3>
+        <div class="gloss">(A Compromised Color Scheme) <span class="pos">n.</span></div>
+        <div class="def"><p>A cast of characters whose specific wrongness produces something unexpectedly beautiful in aggregate. None of them are right. All of them together are. Each person represents a different shade of broken, and the film holds them all in the same frame without resolving any of them into something tidier. The ugliness is the palette. The beauty is what that palette produces.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-12.jpg" alt="A rooftop gathering at night, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+    </section>
+    <section class="cat" id="c3">
+      <header class="cat-head"><span class="cat-no">reel 3</span><h2>the body and gesture</h2><span class="cat-jp">身体</span></header>
+      <article class="entry fx-asym has-media" id="t08" data-no="8">
+        <div class="e-meta"><span class="e-no">no. 08</span><span class="e-cat">the body and gesture</span></div>
+        <h3 class="hw"><span style="display:inline-block;transform:translate(-0.5px,-2.1px) rotate(1.8deg)">U</span><span style="display:inline-block;transform:translate(-1.3px,0.2px) rotate(-1.6deg)">n</span><span style="display:inline-block;transform:translate(-1.3px,0.0px) rotate(-5.6deg)">o</span><span style="display:inline-block;transform:translate(-0.2px,-2.6px) rotate(-4.9deg)">r</span><span style="display:inline-block;transform:translate(-0.2px,2.0px) rotate(-4.5deg)">t</span><span style="display:inline-block;transform:translate(-0.8px,0.8px) rotate(5.4deg)">h</span><span style="display:inline-block;transform:translate(0.2px,-0.6px) rotate(5.7deg)">o</span><span style="display:inline-block;transform:translate(-1.4px,2.2px) rotate(-2.5deg)">d</span><span style="display:inline-block;transform:translate(-1.1px,-2.3px) rotate(-2.3deg)">o</span><span style="display:inline-block;transform:translate(0.9px,-1.9px) rotate(1.0deg)">x</span><span style="display:inline-block;transform:translate(0.4px,-0.8px) rotate(0.6deg)">&nbsp;</span><span style="display:inline-block;transform:translate(-1.3px,-2.6px) rotate(-3.5deg)">G</span><span style="display:inline-block;transform:translate(0.5px,-0.4px) rotate(-2.2deg)">e</span><span style="display:inline-block;transform:translate(0.3px,-0.3px) rotate(-2.4deg)">s</span><span style="display:inline-block;transform:translate(0.9px,1.2px) rotate(-3.1deg)">t</span><span style="display:inline-block;transform:translate(0.2px,0.2px) rotate(4.5deg)">i</span><span style="display:inline-block;transform:translate(0.7px,-1.3px) rotate(5.8deg)">c</span><span style="display:inline-block;transform:translate(-1.1px,-0.5px) rotate(3.1deg)">u</span><span style="display:inline-block;transform:translate(-1.0px,-0.1px) rotate(-5.5deg)">l</span><span style="display:inline-block;transform:translate(0.5px,1.6px) rotate(0.9deg)">a</span><span style="display:inline-block;transform:translate(1.1px,-1.1px) rotate(2.3deg)">t</span><span style="display:inline-block;transform:translate(0.3px,0.5px) rotate(-0.5deg)">i</span><span style="display:inline-block;transform:translate(1.0px,2.7px) rotate(-0.3deg)">o</span><span style="display:inline-block;transform:translate(0.5px,-2.6px) rotate(2.4deg)">n</span></h3>
+        <div class="gloss">(Natural Asymmetrical Movement) <span class="pos">n.</span></div>
+        <div class="def"><p>Physical performance that was not choreographed, or was choreographed to look like it was not. Natural, asymmetrical, slightly wrong by conventional acting standards and exactly right by human ones. The body knows things the script does not say.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-14.jpg" alt="Chihiro crouching with a cat, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-secondary has-media" id="t09" data-no="9">
+        <div class="e-meta"><span class="e-no">no. 09</span><span class="e-cat">the body and gesture</span></div>
+        <h3 class="hw">Sexondary</h3>
+        <div class="gloss">(Sex as Secondary) <span class="pos">n.</span></div>
+        <div class="def"><p>Sexuality present in the atmosphere of a film without being its engine. The erotic is incidental, a fact of the world rather than the point of the scene. The past is stated, not performed. The body is context, not content.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-06.jpg" alt="Chihiro in a red slip by a mirror, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-bangs has-media" id="t10" data-no="10">
+        <div class="e-meta"><span class="e-no">no. 10</span><span class="e-cat">the body and gesture</span></div>
+        <h3 class="hw">Wispy Bangs Make for Wispy Thoughts</h3>
+        <div class="gloss">(Styling as Psychology) <span class="pos">n.</span></div>
+        <div class="def"><p>The hair that falls into the eyes. The softness of appearance against the precision of gaze. In a perfect film, costume and styling are character, not symbolism applied from outside but psychology made visible. The way someone wears their face tells you who they are before they speak.</p></div>
+        <div class="plates"><figure class="plate still"><img src="../../images/chihiro/still-16.jpg" alt="A girl with bangs on a sofa, looking back, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure><figure class="plate mine"><img src="../../images/drawing-3.jpg" alt="A photograph or drawing by Alijah" loading="lazy"><figcaption>by alijah</figcaption></figure></div>
+      </article>
+    </section>
+    <section class="cat" id="c4">
+      <header class="cat-head"><span class="cat-no">reel 4</span><h2>visual language</h2><span class="cat-jp">映像</span></header>
+      <article class="entry fx-object" id="t11" data-no="11">
+        <div class="e-meta"><span class="e-no">no. 11</span><span class="e-cat">visual language</span></div>
+        <h3 class="hw">Random Item Fixation</h3>
+        <div class="gloss">(Empty Symbolism of the Close-Up Cutaway) <span class="pos">n.</span></div>
+        <div class="def"><p>An object receives close-up attention it has not narratively earned. The camera holds on it longer than necessary. The symbolism is withheld. The viewer is invited to supply meaning, or to sit in the emptiness of a thing that just exists. The absence of explanation is the explanation.</p></div>
+        
+      </article>
+      <article class="entry fx-breathless" id="t12" data-no="12">
+        <div class="e-meta"><span class="e-no">no. 12</span><span class="e-cat">visual language</span></div>
+        <h3 class="hw">Breathless Transitions</h3>
+        <div class="gloss">(Former Latter, No Matter) <span class="pos">n.</span></div>
+        <div class="def"><p>Scene changes that do not announce themselves. Time passes without notice. The film moves through seasons the way a person moves through years, not marked by event but by the quiet accumulation of presence. Former, latter, no matter.</p></div>
+        
+      </article>
+      <article class="entry fx-held has-media" id="t13" data-no="13">
+        <div class="e-meta"><span class="e-no">no. 13</span><span class="e-cat">visual language</span></div>
+        <h3 class="hw">The Held Shot</h3>
+        <div class="gloss">(Weather on a Face) <span class="pos">n.</span></div>
+        <div class="def"><p>The camera stays on a face longer than comfort allows. Not a close-up for information but a close-up for weather. You watch someone experience something in real time. Incompatible emotions held simultaneously, not edited around. Witnessed. The refusal to cut is the statement.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-13.jpg" alt="Chihiro in profile, hair in the wind, at the harbor, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-seam" id="t14" data-no="14">
+        <div class="e-meta"><span class="e-no">no. 14</span><span class="e-cat">visual language</span></div>
+        <h3 class="hw">Toppling Inconveniences</h3>
+        <div class="gloss">(Consequently Causing Concern) <span class="pos">n.</span></div>
+        <div class="def"><p>Structural looseness that looks like weakness until you realize it is how the film breathes. Not every seam is a flaw. Some films hold together through feeling rather than architecture,</p><div class="exhale" aria-hidden="true">( exhale )</div><p>and when you notice a gap, it is usually the film exhaling. The concern for how it is all put together is part of the experience.</p></div>
+        
+      </article>
+    </section>
+    <section class="cat" id="c5">
+      <header class="cat-head"><span class="cat-no">reel 5</span><h2>the seeing problem</h2><span class="cat-jp">視覚</span></header>
+      <article class="entry fx-invert has-media" id="t15" data-no="15">
+        <div class="e-meta"><span class="e-no">no. 15</span><span class="e-cat">the seeing problem</span></div>
+        <h3 class="hw">Mature Thoughtful Children Juxtaposing Cold Adults</h3>
+        <div class="gloss">(Child-Adult Inversion) <span class="pos">n.</span></div>
+        <div class="def"><p>The children are porous. The adults are sealed. A child in a perfect film understands something the adult has forgotten or refused to know. The child&#x27;s emotional honesty makes the adult&#x27;s composure look like damage.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-10.jpg" alt="A boy crouched in a rainy apartment hallway, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-seeing has-media" id="t16" data-no="16">
+        <div class="e-meta"><span class="e-no">no. 16</span><span class="e-cat">the seeing problem</span></div>
+        <h3 class="hw">Someone Blind Who Cannot See / Someone Who Sees But Is Blinded</h3>
+        <div class="gloss">(You Can See Right Through Me) <span class="pos">n.</span></div>
+        <div class="def"><div class="see"><p class="see-a">Two characters who together form one complete act of seeing. One can observe clearly from the outside but lacks the interiority to understand. One has total interiority but cannot locate themselves. Together they complete each other&#x27;s vision without either knowing it.</p><p class="see-b" aria-hidden="true">Two characters who together form one complete act of seeing. One can observe clearly from the outside but lacks the interiority to understand. One has total interiority but cannot locate themselves. Together they complete each other&#x27;s vision without either knowing it.</p></div></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-11.jpg" alt="A boy and a teen girl sitting in the rainy hallway, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+    </section>
+    <section class="cat" id="c6">
+      <header class="cat-head"><span class="cat-no">reel 6</span><h2>ensemble and relationship</h2><span class="cat-jp">群像</span></header>
+      <article class="entry fx-plain has-media" id="t17" data-no="17">
+        <div class="e-meta"><span class="e-no">no. 17</span><span class="e-cat">ensemble and relationship</span></div>
+        <h3 class="hw">The Parentless Make Great Parents</h3>
+        <div class="gloss">(Self-Explanatory) <span class="pos">n.</span></div>
+        <div class="def"><p>Characters who were never parented, or parented badly, who become the most instinctive, generous caregivers in the room. Not in spite of their absence of parents but because of it. They know what someone needed and never got because they needed it too.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-08.jpg" alt="A woman with pink hair holding a little girl&#x27;s hand at night, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-drift has-media" id="t18" data-no="18">
+        <div class="e-meta"><span class="e-no">no. 18</span><span class="e-cat">ensemble and relationship</span></div>
+        <h3 class="hw">Drifters Find Each Other</h3>
+        <div class="gloss">(Bustling Shells in a Soft Current) <span class="pos">n.</span></div>
+        <div class="def"><p class="drift-words"><span style="--i:0">Characters</span> <span style="--i:1">who</span> <span style="--i:2">are</span> <span style="--i:3">not</span> <span style="--i:4">looking</span> <span style="--i:5">for</span> <span style="--i:6">community</span> <span style="--i:7">and</span> <span style="--i:8">find</span> <span style="--i:9">it</span> <span style="--i:10">anyway,</span> <span style="--i:11">not</span> <span style="--i:12">through</span> <span style="--i:13">action</span> <span style="--i:14">or</span> <span style="--i:15">intention</span> <span style="--i:16">but</span> <span style="--i:17">through</span> <span style="--i:18">proximity</span> <span style="--i:19">and</span> <span style="--i:20">time.</span> <span style="--i:21">They</span> <span style="--i:22">wash</span> <span style="--i:23">up</span> <span style="--i:24">next</span> <span style="--i:25">to</span> <span style="--i:26">each</span> <span style="--i:27">other.</span> <span style="--i:28">That</span> <span style="--i:29">is</span> <span style="--i:30">enough.</span> <span style="--i:31">Like</span> <span style="--i:32">bustling</span> <span style="--i:33">shells</span> <span style="--i:34">in</span> <span style="--i:35">a</span> <span style="--i:36">soft</span> <span style="--i:37">current.</span></p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-01.jpg" alt="Chihiro and an old man sharing a bento on a pallet, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-plain has-media" id="t19" data-no="19">
+        <div class="e-meta"><span class="e-no">no. 19</span><span class="e-cat">ensemble and relationship</span></div>
+        <h3 class="hw">Band of Empties Finding Solace</h3>
+        <div class="gloss">(Until They Cannot, or Have To Stop) <span class="pos">n.</span></div>
+        <div class="def"><p>An ensemble of characters who are hollow in their own specific ways, different shapes of empty, who find in each other a temporary fullness. Not permanent. Not promised. Just enough, for now, until the current changes.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-02.jpg" alt="Chihiro and a boy on a bench behind a chain-link fence, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+      <article class="entry fx-witness has-media" id="t20" data-no="20">
+        <div class="e-meta"><span class="e-no">no. 20</span><span class="e-cat">ensemble and relationship</span></div>
+        <h3 class="hw">Confidante That Knows Their Place</h3>
+        <div class="gloss">(But Knows the MC Ought Not To) <span class="pos">n.</span></div>
+        <div class="def"><p>A secondary character who understands the protagonist&#x27;s arc more clearly than the protagonist does, and knows their role is to witness, not to intervene. They know where the story is going. They know the main character is not supposed to stay.</p></div>
+        <figure class="plate still"><img src="../../images/chihiro/still-04.jpg" alt="A girl and an older woman at a hospital bed table, from Call Me Chihiro" loading="lazy" width="650" height="390"><figcaption>still · Call Me Chihiro (2023)</figcaption></figure>
+      </article>
+    </section>
+    </main>
+  </div>
+
+  <section class="check" id="check">
+    <header class="cat-head"><span class="cat-no">reel 7</span><h2>not a checklist</h2><span class="cat-jp">採点</span></header>
+    <p class="check-intro">These tropes are not a checklist. But try it anyway: pick a film you love, tap the terms it has, and see where it lands. <i>Call Me Chihiro</i> is loaded first, as the anchor.</p>
+    <div class="check-tools">
+      <label for="film-name" class="label">the film</label>
+      <input id="film-name" type="text" value="Call Me Chihiro" autocomplete="off" list="film-list">
+      <datalist id="film-list"><option value="Call Me Chihiro"><option value="Open House"><option value="Nobody Knows"><option value="Monogatari"><option value="Omoide Emanon"><option value="Burning"><option value="Yanagawa"><option value="More Than Words"><option value="Jamojaya"><option value="Monster"><option value="Perfect Days"><option value="Renoir"><option value="Sounds of Winter"></datalist>
+      <button type="button" class="pill" id="clear">clear</button>
+      <button type="button" class="pill" id="anchor">load the anchor</button>
+    </div>
+    <div class="score-row"><div class="score"><b id="score">20</b><span>/20</span></div><p class="verdict" id="verdict"></p></div>
+    <ul class="grid" id="grid"></ul>
+  </section>
+
+  <section class="closing">
+    <figure class="plate still closing-still"><img src="../../images/chihiro/still-07.jpg" alt="A woman walking the shore at night, from Call Me Chihiro" loading="lazy" width="650" height="390"></figure>
+    <span class="label">to say the least</span>
+    <p>These tropes are not a checklist. No film needs all twenty to be perfect, but if one does have all twenty, it certainly is perfect in my book. These are simply the films that have moved me. I am still trying to understand why.</p>
+    <span class="sig">— Alijah Jacob</span>
+  </section>
+
+  <footer class="foot">
+    <a href="../../index.html">← issue no. 01</a>
+    <span>goneadrift · issue no. 02 · stills from <i>Call Me Chihiro</i> (2023), drawing by alijah</span>
+  </footer>
+</div>
+<script>
+(function(){
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // entries "play" once they're on screen
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } }),{threshold:.35});
+  document.querySelectorAll('.entry').forEach(el=>io.observe(el));
+
+  // forced inference: tap reveals on touch screens
+  document.querySelectorAll('.hidden-line').forEach(el=>el.addEventListener('click',()=>el.classList.toggle('shown')));
+  // the seeing problem: tap flips which half can see
+  document.querySelectorAll('.see').forEach(el=>{
+    el.addEventListener('click',()=>el.classList.toggle('flip'));
+    const h=document.createElement('div'); h.className='see-hint'; h.textContent='hover or tap · each half sees what the other cannot'; el.after(h);
+  });
+
+  // code switcher: the headword changes register every so often
+  if(!reduce) document.querySelectorAll('.switcher').forEach(el=>{
+    let r=0; setInterval(()=>{ el.classList.remove('r1','r2','r3'); r=(r+1)%4; if(r) el.classList.add('r'+r); },1700);
+  });
+
+  // child-adult inversion: porous children, sealed adults
+  document.querySelectorAll('.fx-invert .def p').forEach(p=>{
+    p.innerHTML=p.innerHTML.replace('The children are porous.','<span class="porous">The children are porous.</span>').replace('The adults are sealed.','<span class="sealed">The adults are sealed.</span>');
+  });
+
+  // jazz as silence killer: a few bars, then out
+  const jz=document.getElementById('jazz');
+  if(jz){
+    let a=null, t=0;
+    const stop=()=>{ if(!a) return; const s=a; let v=s.volume; const f=setInterval(()=>{ v-=.08; if(v<=0){ clearInterval(f); s.pause(); } else s.volume=v; },80); a=null; jz.classList.remove('on'); jz.querySelector('.jz-ico').textContent='▶'; };
+    jz.addEventListener('click',()=>{
+      if(a){ clearTimeout(t); stop(); return; }
+      a=new Audio(jz.dataset.src); a.volume=0; a.play().catch(()=>{});
+      jz.classList.add('on'); jz.querySelector('.jz-ico').textContent='■';
+      let v=0; const f=setInterval(()=>{ v+=.06; if(!a||v>=.8){ clearInterval(f); } else a.volume=v; },80);
+      t=setTimeout(stop,11000);
+    });
+  }
+
+  // not a checklist
+  const TERMS=["Cross-Pollination of Mumbled Nothingness", "Forced Inference", "Jazz as Silence Killer", "Anti-Nostalgia", "Master Code Switcher", "Alien-Like / Alien Speak", "Beautiful Ugly", "Unorthodox Gesticulation", "Sexondary", "Wispy Bangs Make for Wispy Thoughts", "Random Item Fixation", "Breathless Transitions", "The Held Shot", "Toppling Inconveniences", "Mature Thoughtful Children Juxtaposing Cold Adults", "Someone Blind Who Cannot See / Someone Who Sees But Is Blinded", "The Parentless Make Great Parents", "Drifters Find Each Other", "Band of Empties Finding Solace", "Confidante That Knows Their Place"];
+  const grid=document.getElementById('grid'), score=document.getElementById('score'), verdict=document.getElementById('verdict'), name=document.getElementById('film-name');
+  const btns=TERMS.map((t,i)=>{
+    const li=document.createElement('li'), b=document.createElement('button'); b.type='button'; b.setAttribute('aria-pressed','true');
+    b.innerHTML='<span>'+String(i+1).padStart(2,'0')+'</span>'+t; b.addEventListener('click',()=>{ b.setAttribute('aria-pressed', b.getAttribute('aria-pressed')!=='true'); update(); });
+    li.appendChild(b); grid.appendChild(li); return b;
+  });
+  function update(){
+    const n=btns.filter(b=>b.getAttribute('aria-pressed')==='true').length; score.textContent=n;
+    const f=(name.value||'this film').trim();
+    verdict.textContent = n===20 ? f+' has all twenty. perfect, in my book.'
+      : n>=15 ? f+' keeps being right. almost all the way there.'
+      : n>=8  ? 'something in '+f+' is working. keep watching it.'
+      : n>=1  ? f+' has a few true moments. that counts.'
+      : 'nothing yet. tap the terms '+f+' has.';
+  }
+  name.addEventListener('input',update);
+  document.getElementById('clear').addEventListener('click',()=>{ btns.forEach(b=>b.setAttribute('aria-pressed','false')); if(name.value==='Call Me Chihiro') name.value=''; update(); name.focus(); });
+  document.getElementById('anchor').addEventListener('click',()=>{ btns.forEach(b=>b.setAttribute('aria-pressed','true')); name.value='Call Me Chihiro'; update(); });
+  update();
+})();
+
+</script>
+</body>
+</html>

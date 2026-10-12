@@ -428,6 +428,22 @@ footer{border-top:1px dashed var(--line);padding-top:18px;display:flex;justify-c
 .side-party:focus-visible,.side-tony:focus-visible{outline:2px dashed var(--riso);outline-offset:4px}
 @media (prefers-reduced-motion:reduce){.sp-row:nth-child(1){background:rgba(255,255,255,.1)}.sp-row:nth-child(1) .sp-cur{visibility:visible}}
 
+/* issue switcher */
+.issues-menu{position:relative;justify-self:end}
+.issues-menu summary{list-style:none;cursor:pointer;font-family:var(--f-dot);font-size:13px;color:var(--riso);border:1.5px solid var(--riso);border-radius:999px;padding:2px 12px}
+.issues-menu summary::-webkit-details-marker{display:none}
+.issues-menu[open] summary{background:var(--riso);color:var(--desk)}
+.issues-menu nav{position:absolute;right:0;top:calc(100% + 8px);z-index:30;background:var(--paper);border:1px solid var(--line);box-shadow:0 14px 30px rgba(0,0,0,.5);min-width:270px;display:grid;text-align:left}
+.issues-menu nav a{display:grid;grid-template-columns:40px 1fr;gap:0 10px;padding:10px 14px;text-decoration:none;border-bottom:1px dashed var(--line);font-family:var(--f-display);font-size:16px}
+.issues-menu nav a:last-child{border-bottom:0}
+.issues-menu nav a b{font-size:26px;line-height:1;grid-row:span 2;color:var(--riso)}
+.issues-menu nav a span{font-family:var(--f-dot);font-size:11px;color:var(--ink-dim)}
+.issues-menu nav a:hover{background:var(--paper-2)}
+@media (max-width:560px){.issues-menu{justify-self:start}.issues-menu nav{left:0;right:auto}}
+.zine.next{background:#efe7d6;color:#1d1714;transform:rotate(1.5deg);box-shadow:0 10px 22px rgba(0,0,0,.45)}
+.zine.next .dot{color:#6b5d50}
+.zine.next:hover{transform:rotate(0) translateY(-4px)}
+
 /* drift visualizer */
 .drift-player{margin:0;position:relative;background:#120e0c;border:1px solid var(--line);overflow:hidden;display:grid}
 .drift-player canvas{display:block;width:100%;height:clamp(300px,52vw,520px);max-width:100%}
@@ -466,7 +482,13 @@ footer{border-top:1px dashed var(--line);padding-top:18px;display:flex;justify-c
       <span class="dot">issue no.</span>
       <b>01</b>
       <span class="dot">autumn 2026 · san diego</span>
-      <a class="dot back-link" href="#issues">back issues ↓</a>
+      <details class="issues-menu">
+        <summary>all issues ▾</summary>
+        <nav aria-label="Issues">
+          <a href="#" aria-current="page"><b>01</b> goneadrift <span>autumn 2026 · you are here</span></a>
+          <a href="issues/02/"><b>02</b> what makes a film perfect <span>a special issue · new</span></a>
+        </nav>
+      </details>
     </div>
   </header>
 
@@ -487,6 +509,7 @@ footer{border-top:1px dashed var(--line);padding-top:18px;display:flex;justify-c
     <div class="now taped">
       <span class="stamp">right now</span>
       <ul>
+        <li>new: <a href="issues/02/" style="color:var(--riso)">issue 02, what makes a film perfect</a></li>
         <li>training to become a medical assistant</li>
         <li><i>adrift</i> screened at Japan Film Festival LA and Hidden City 2025</li>
         <li>on the radio: seven of my songs, 89.1 to 105.9</li>
@@ -803,10 +826,11 @@ footer{border-top:1px dashed var(--line);padding-top:18px;display:flex;justify-c
   </section>
 
   <section id="issues" class="issues">
-    <div class="sec-head"><h2>back issues</h2><span class="jp">号</span><span class="dot">every big update gets its own issue</span></div>
+    <div class="sec-head"><h2>back issues</h2><span class="jp">号</span><span class="dot">each issue is its own page</span></div>
     <div class="issue-row">
       <a class="zine current" href="#" aria-current="page"><span class="zine-no">01</span><span class="zine-name">goneadrift</span><span class="dot">autumn 2026</span><span class="zine-tag">you are here</span></a>
-      <div class="zine empty" aria-hidden="true"><span class="zine-no">02</span><span class="dot">not yet</span></div>
+      <a class="zine next" href="issues/02/"><span class="zine-no">02</span><span class="zine-name">what makes a film perfect</span><span class="dot">a special issue</span><span class="zine-tag">read it →</span></a>
+      <div class="zine empty" aria-hidden="true"><span class="zine-no">03</span><span class="dot">not yet</span></div>
     </div>
   </section>
 
